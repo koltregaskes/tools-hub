@@ -354,6 +354,19 @@ h3,
   box-shadow: var(--shadow);
 }
 
+.feature__art-link {
+  display: block;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.feature__art-link:hover,
+.feature__art-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.22);
+  outline: none;
+}
+
 .feature__copy h3 {
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   line-height: 0.96;
