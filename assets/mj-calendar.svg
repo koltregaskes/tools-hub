@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-label="MJ Calendar poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#24170d"/>
+      <stop offset="100%" stop-color="#4a2c12"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="1200" fill="url(#bg)"/>
+  <circle cx="766" cy="144" r="136" fill="#f7b55b" fill-opacity="0.2"/>
+  <circle cx="162" cy="1004" r="210" fill="#fce4ae" fill-opacity="0.1"/>
+  <rect x="104" y="164" width="752" height="886" rx="34" fill="#2d1d12" fill-opacity="0.82" stroke="#f7b55b" stroke-opacity="0.28"/>
+  <rect x="148" y="228" width="664" height="110" rx="20" fill="#f7b55b" fill-opacity="0.14"/>
+  <g fill="#ffffff" fill-opacity="0.08">
+    <rect x="148" y="380" width="84" height="84" rx="14"/>
+    <rect x="252" y="380" width="84" height="84" rx="14"/>
+    <rect x="356" y="380" width="84" height="84" rx="14"/>
+    <rect x="460" y="380" width="84" height="84" rx="14"/>
+    <rect x="564" y="380" width="84" height="84" rx="14"/>
+    <rect x="668" y="380" width="84" height="84" rx="14"/>
+    <rect x="148" y="488" width="84" height="84" rx="14"/>
+    <rect x="252" y="488" width="84" height="84" rx="14"/>
+    <rect x="356" y="488" width="84" height="84" rx="14"/>
+    <rect x="460" y="488" width="84" height="84" rx="14"/>
+    <rect x="564" y="488" width="84" height="84" rx="14"/>
+    <rect x="668" y="488" width="84" height="84" rx="14"/>
+    <rect x="148" y="596" width="84" height="84" rx="14"/>
+    <rect x="252" y="596" width="84" height="84" rx="14"/>
+    <rect x="356" y="596" width="84" height="84" rx="14"/>
+    <rect x="460" y="596" width="84" height="84" rx="14"/>
+    <rect x="564" y="596" width="84" height="84" rx="14"/>
+    <rect x="668" y="596" width="84" height="84" rx="14"/>
+  </g>
+  <rect x="356" y="596" width="84" height="84" rx="14" fill="#f7b55b" fill-opacity="0.34" stroke="#f7b55b" stroke-opacity="0.6"/>
+  <rect x="148" y="748" width="604" height="210" rx="18" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="148" y="120" fill="#fff8ee" font-family="Arial, sans-serif" font-size="92" font-weight="800">MJ</text>
+  <text x="148" y="188" fill="#f7b55b" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">CALENDAR</text>
+</svg>

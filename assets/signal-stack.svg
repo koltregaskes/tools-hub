@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-label="Signal Stack poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#211116"/>
+      <stop offset="100%" stop-color="#4a201e"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="1200" fill="url(#bg)"/>
+  <circle cx="780" cy="168" r="146" fill="#ff8b63" fill-opacity="0.2"/>
+  <circle cx="148" cy="970" r="220" fill="#ffd0b9" fill-opacity="0.1"/>
+  <rect x="96" y="150" width="768" height="900" rx="30" fill="#2b1519" fill-opacity="0.82" stroke="#ff8b63" stroke-opacity="0.22"/>
+  <rect x="146" y="234" width="664" height="160" rx="22" fill="#ffffff" fill-opacity="0.05"/>
+  <path d="M184 334 L312 278 L436 320 L566 244 L708 306" fill="none" stroke="#ff8b63" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M184 388 L312 332 L436 374 L566 298 L708 360" fill="none" stroke="#ffd1c2" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="146" y="446" width="302" height="204" rx="18" fill="#ff8b63" fill-opacity="0.12"/>
+  <rect x="486" y="446" width="324" height="204" rx="18" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="146" y="688" width="664" height="102" rx="16" fill="#ffffff" fill-opacity="0.05"/>
+  <rect x="146" y="824" width="664" height="102" rx="16" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="140" y="116" fill="#fff4f1" font-family="Arial, sans-serif" font-size="82" font-weight="800">SIGNAL</text>
+  <text x="146" y="182" fill="#ff8b63" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">STACK</text>
+</svg>

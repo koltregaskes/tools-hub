@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-label="Strudel Studio poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1f31"/>
+      <stop offset="100%" stop-color="#1d3248"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="1200" fill="url(#bg)"/>
+  <circle cx="764" cy="166" r="144" fill="#8df062" fill-opacity="0.16"/>
+  <circle cx="160" cy="960" r="220" fill="#73d5ff" fill-opacity="0.1"/>
+  <rect x="94" y="156" width="772" height="896" rx="30" fill="#0f2435" fill-opacity="0.82" stroke="#6bd6ff" stroke-opacity="0.24"/>
+  <rect x="144" y="230" width="672" height="164" rx="22" fill="#ffffff" fill-opacity="0.05"/>
+  <path d="M174 320 C238 236, 330 416, 404 304 S554 202, 624 314 S748 416, 802 266" fill="none" stroke="#6bd6ff" stroke-width="14" stroke-linecap="round"/>
+  <path d="M174 350 C238 266, 330 446, 404 334 S554 232, 624 344 S748 446, 802 296" fill="none" stroke="#8df062" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round"/>
+  <rect x="144" y="436" width="322" height="236" rx="18" fill="#6bd6ff" fill-opacity="0.12"/>
+  <rect x="494" y="436" width="322" height="236" rx="18" fill="#8df062" fill-opacity="0.12"/>
+  <g fill="#ffffff" fill-opacity="0.08">
+    <rect x="144" y="718" width="58" height="180" rx="12"/>
+    <rect x="220" y="758" width="58" height="140" rx="12"/>
+    <rect x="296" y="688" width="58" height="210" rx="12"/>
+    <rect x="372" y="736" width="58" height="162" rx="12"/>
+    <rect x="448" y="702" width="58" height="196" rx="12"/>
+    <rect x="524" y="746" width="58" height="152" rx="12"/>
+    <rect x="600" y="678" width="58" height="220" rx="12"/>
+    <rect x="676" y="728" width="58" height="170" rx="12"/>
+    <rect x="752" y="690" width="58" height="208" rx="12"/>
+  </g>
+  <text x="136" y="114" fill="#f6fbff" font-family="Arial, sans-serif" font-size="82" font-weight="800">STRUDEL</text>
+  <text x="142" y="180" fill="#8df062" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">STUDIO</text>
+</svg>

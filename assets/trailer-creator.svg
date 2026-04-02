@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-label="Trailer Creator poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#171128"/>
+      <stop offset="100%" stop-color="#32214a"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="1200" fill="url(#bg)"/>
+  <circle cx="764" cy="164" r="136" fill="#c98fff" fill-opacity="0.18"/>
+  <circle cx="180" cy="980" r="230" fill="#efd9ff" fill-opacity="0.08"/>
+  <rect x="98" y="158" width="764" height="892" rx="30" fill="#1d1630" fill-opacity="0.82" stroke="#c98fff" stroke-opacity="0.24"/>
+  <rect x="144" y="230" width="672" height="124" rx="18" fill="#ffffff" fill-opacity="0.05"/>
+  <rect x="144" y="392" width="672" height="420" rx="20" fill="#ffffff" fill-opacity="0.05"/>
+  <rect x="184" y="438" width="214" height="286" rx="16" fill="#c98fff" fill-opacity="0.16"/>
+  <rect x="430" y="438" width="336" height="50" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="430" y="512" width="286" height="18" rx="9" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="430" y="550" width="308" height="18" rx="9" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="430" y="588" width="266" height="18" rx="9" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="430" y="640" width="192" height="56" rx="16" fill="#c98fff" fill-opacity="0.18"/>
+  <rect x="144" y="850" width="672" height="134" rx="18" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="140" y="116" fill="#fbf7ff" font-family="Arial, sans-serif" font-size="84" font-weight="800">TRAILER</text>
+  <text x="146" y="184" fill="#c98fff" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">CREATOR</text>
+</svg>

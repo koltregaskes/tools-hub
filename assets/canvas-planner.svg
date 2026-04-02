@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-label="Canvas Planner poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1f2a"/>
+      <stop offset="100%" stop-color="#16394a"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="1200" fill="url(#bg)"/>
+  <circle cx="760" cy="160" r="140" fill="#7cf2c3" fill-opacity="0.18"/>
+  <circle cx="210" cy="950" r="220" fill="#84baff" fill-opacity="0.12"/>
+  <rect x="88" y="122" width="784" height="956" rx="28" fill="#102b37" fill-opacity="0.78" stroke="#7cf2c3" stroke-opacity="0.22"/>
+  <rect x="132" y="218" width="214" height="176" rx="20" fill="#7cf2c3" fill-opacity="0.16" stroke="#7cf2c3" stroke-opacity="0.32"/>
+  <rect x="372" y="218" width="214" height="176" rx="20" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+  <rect x="612" y="218" width="214" height="176" rx="20" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+  <rect x="132" y="436" width="694" height="120" rx="18" fill="#ffffff" fill-opacity="0.05"/>
+  <rect x="132" y="590" width="324" height="374" rx="18" fill="#ffffff" fill-opacity="0.05"/>
+  <rect x="482" y="590" width="344" height="172" rx="18" fill="#7cf2c3" fill-opacity="0.12"/>
+  <rect x="482" y="792" width="344" height="172" rx="18" fill="#84baff" fill-opacity="0.12"/>
+  <text x="132" y="104" fill="#f7fbff" font-family="Arial, sans-serif" font-size="86" font-weight="800">CANVAS</text>
+  <text x="138" y="170" fill="#7cf2c3" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">PLANNER</text>
+</svg>

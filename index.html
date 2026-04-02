@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools Hub</title>
+    <meta
+      name="description"
+      content="A public-facing tools hub for planning, publishing, and music tools built by Kolt Regaskes."
+    />
+    <meta property="og:title" content="Tools Hub" />
+    <meta
+      property="og:description"
+      content="A clean public front door for the practical tools being built across planning, publishing, and music."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true">
+      <div class="atmosphere__orb atmosphere__orb--cyan"></div>
+      <div class="atmosphere__orb atmosphere__orb--crimson"></div>
+      <div class="atmosphere__orb atmosphere__orb--gold"></div>
+      <div class="atmosphere__grid"></div>
+    </div>
+
+    <header class="site-header">
+      <a class="site-brand" href="#top">Tools Hub</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#lineup">Lineup</a>
+        <a href="#approach">Approach</a>
+        <a href="#future">Future Releases</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__copy" data-reveal>
+          <p class="eyebrow">Public Tools Hub</p>
+          <h1>Small tools. Sharp workflows. Real utility.</h1>
+          <p class="hero__lede">
+            This is the public front door for the tool stack: visual planning, daily batch tracking, creator
+            scheduling, trailer packaging, and the evolving coded-music studio.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#lineup">Browse The Tools</a>
+            <a class="button button--ghost" href="https://github.com/koltregaskes/tools-hub">View Repository</a>
+          </div>
+          <ul class="hero__facts" aria-label="Hub facts">
+            <li>5 active tools</li>
+            <li>Planning, publishing, and music workflows</li>
+            <li>Built to grow into live apps, docs, and public releases</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" data-reveal>
+          <div class="hero-stack">
+            <article class="hero-stack__card hero-stack__card--front">
+              <img src="assets/canvas-planner.svg" alt="Canvas Planner preview art" />
+              <div class="hero-stack__meta">
+                <span>Planning tool</span>
+                <strong>Canvas Planner</strong>
+              </div>
+            </article>
+            <article class="hero-stack__card hero-stack__card--left">
+              <img src="assets/strudel-studio.svg" alt="Strudel Studio preview art" />
+            </article>
+            <article class="hero-stack__card hero-stack__card--right">
+              <img src="assets/mj-calendar.svg" alt="MJ Calendar preview art" />
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="studio-strip" aria-label="Hub status" data-reveal>
+        <div>
+          <span class="studio-strip__label">Status</span>
+          <strong>Active tool build-out</strong>
+        </div>
+        <div>
+          <span class="studio-strip__label">Public layer</span>
+          <strong>GitHub Pages-ready</strong>
+        </div>
+        <div>
+          <span class="studio-strip__label">Next unlock</span>
+          <strong>Live apps, screenshots, and tighter docs</strong>
+        </div>
+      </section>
+
+      <section class="lineup" id="lineup">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Current Lineup</p>
+          <h2>Five tools, five different jobs, one cleaner front door.</h2>
+          <p>
+            The hub is designed to hold the growing tool stack over time. Right now it introduces the main working
+            tools and gives each one enough room to feel distinct.
+          </p>
+        </div>
+
+        <article class="feature feature--split" id="canvas-planner" data-reveal>
+          <div class="feature__art">
+            <img src="assets/canvas-planner.svg" alt="Canvas Planner poster art" />
+          </div>
+          <div class="feature__copy">
+            <p class="feature__kicker">Planning Tool</p>
+            <h3>Canvas Planner</h3>
+            <p class="feature__summary">
+              A visual planning surface for shaping image campaigns, boards, and task flow without getting buried in a
+              generic project manager.
+            </p>
+            <ul class="feature__list">
+              <li>Focused board-style workflow for visual work</li>
+              <li>Clean local planning surface for batches and next actions</li>
+              <li>Strong candidate for later hub-system migration</li>
+            </ul>
+            <dl class="feature__meta">
+              <div>
+                <dt>Status</dt>
+                <dd>Active local tool</dd>
+              </div>
+              <div>
+                <dt>Platform</dt>
+                <dd>Web app</dd>
+              </div>
+              <div>
+                <dt>Public rollout</dt>
+                <dd>Repo and docs slot prepared</dd>
+              </div>
+            </dl>
+            <div class="feature__actions">
+              <a class="button button--primary" href="https://github.com/koltregaskes/canvas-planner">View Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--reverse" id="mj-calendar" data-reveal>
+          <div class="feature__art">
+            <img src="assets/mj-calendar.svg" alt="MJ Calendar poster art" />
+          </div>
+          <div class="feature__copy">
+            <p class="feature__kicker">Planning Tool</p>
+            <h3>MJ Calendar</h3>
+            <p class="feature__summary">
+              A daily checklist calendar built around the real Midjourney batch flow: review images, videos,
+              upscales, publish, and any extra recurring stages you need.
+            </p>
+            <ul class="feature__list">
+              <li>Simple daily workflow tracking with notes</li>
+              <li>Restore the standard review pipeline at any time</li>
+              <li>Made for repeat batch work rather than generic scheduling</li>
+            </ul>
+            <dl class="feature__meta">
+              <div>
+                <dt>Status</dt>
+                <dd>Useful local tool</dd>
+              </div>
+              <div>
+                <dt>Platform</dt>
+                <dd>Browser</dd>
+              </div>
+              <div>
+                <dt>Public rollout</dt>
+                <dd>Ready for repo and docs exposure</dd>
+              </div>
+            </dl>
+            <div class="feature__actions">
+              <a class="button button--primary" href="https://github.com/koltregaskes/mj-calendar">View Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--split" id="signal-stack" data-reveal>
+          <div class="feature__art">
+            <img src="assets/signal-stack.svg" alt="Signal Stack poster art" />
+          </div>
+          <div class="feature__copy">
+            <p class="feature__kicker">Publishing Tool</p>
+            <h3>Signal Stack</h3>
+            <p class="feature__summary">
+              A creator scheduling tool aimed at image and video publishing for Instagram, TikTok, and YouTube rather
+              than the text-first planning tools already handled elsewhere.
+            </p>
+            <ul class="feature__list">
+              <li>Focused on visual and video publishing workflows</li>
+              <li>Clearer fit for creator pipelines than generic queue tools</li>
+              <li>Another strong candidate for later hub-system migration</li>
+            </ul>
+            <dl class="feature__meta">
+              <div>
+                <dt>Status</dt>
+                <dd>Preview build</dd>
+              </div>
+              <div>
+                <dt>Platform</dt>
+                <dd>Browser</dd>
+              </div>
+              <div>
+                <dt>Public rollout</dt>
+                <dd>Repo and concept page ready</dd>
+              </div>
+            </dl>
+            <div class="feature__actions">
+              <a class="button button--primary" href="https://github.com/koltregaskes/buffer-replacement">View Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--reverse" id="trailer-creator" data-reveal>
+          <div class="feature__art">
+            <img src="assets/trailer-creator.svg" alt="Trailer Creator poster art" />
+          </div>
+          <div class="feature__copy">
+            <p class="feature__kicker">Publishing Tool</p>
+            <h3>Trailer Creator</h3>
+            <p class="feature__summary">
+              A dossier-style workspace for shaping story notes, lore fragments, narration ideas, and trailer structure
+              into something usable for packaging a release.
+            </p>
+            <ul class="feature__list">
+              <li>Built around trailer hooks and supporting material</li>
+              <li>Useful for turning fragments into a coherent package</li>
+              <li>Designed as a practical internal utility, not just a showcase</li>
+            </ul>
+            <dl class="feature__meta">
+              <div>
+                <dt>Status</dt>
+                <dd>Working local tool</dd>
+              </div>
+              <div>
+                <dt>Platform</dt>
+                <dd>Browser</dd>
+              </div>
+              <div>
+                <dt>Public rollout</dt>
+                <dd>Repo and docs slot prepared</dd>
+              </div>
+            </dl>
+            <div class="feature__actions">
+              <a class="button button--primary" href="https://github.com/koltregaskes/trailer_creator">View Repo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--split" id="strudel-studio" data-reveal>
+          <div class="feature__art">
+            <img src="assets/strudel-studio.svg" alt="Strudel Studio poster art" />
+          </div>
+          <div class="feature__copy">
+            <p class="feature__kicker">Music Tool</p>
+            <h3>Strudel Studio</h3>
+            <p class="feature__summary">
+              The merged direction for the Strudel work: programmable music patterns, sample chopping, scenes, and
+              recording, all moving toward one richer studio-style tool.
+            </p>
+            <ul class="feature__list">
+              <li>Code-driven music creation with a friendlier control surface</li>
+              <li>Sample import, vocal chops, scenes, and recording direction</li>
+              <li>Two current repos represented as one product path</li>
+            </ul>
+            <dl class="feature__meta">
+              <div>
+                <dt>Status</dt>
+                <dd>Main active music direction</dd>
+              </div>
+              <div>
+                <dt>Platform</dt>
+                <dd>Browser</dd>
+              </div>
+              <div>
+                <dt>Public rollout</dt>
+                <dd>Main repo identified, merge path ongoing</dd>
+              </div>
+            </dl>
+            <div class="feature__actions">
+              <a class="button button--primary" href="https://github.com/koltregaskes/strudel-rave-remix">View Repo</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="approach" id="approach">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Approach</p>
+          <h2>A public shell built to expand with every finished tool.</h2>
+        </div>
+        <div class="approach__grid">
+          <article data-reveal>
+            <span class="approach__index">01</span>
+            <h3>Showcase first</h3>
+            <p>The site is already structured for richer tool pages, live demos, screenshots, and clearer public positioning as the tool stack grows.</p>
+          </article>
+          <article data-reveal>
+            <span class="approach__index">02</span>
+            <h3>Static by default</h3>
+            <p>It runs cleanly on GitHub Pages today, with no framework lock-in and no build complexity needed for the first public release.</p>
+          </article>
+          <article data-reveal>
+            <span class="approach__index">03</span>
+            <h3>Ready for upgrades</h3>
+            <p>Live app links, docs, onboarding, screenshots, feature pages, and later hub integrations can all slot in without rebuilding the whole thing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="future" id="future" data-reveal>
+        <p class="eyebrow">Future Releases</p>
+        <h2>This page becomes the release rail for every next tool.</h2>
+        <p>
+          As more tools become public-ready, this hub can carry live web links, screenshots, change notes, launch
+          writeups, and deeper product pages without needing a total redesign.
+        </p>
+        <div class="future__actions">
+          <a class="button button--primary" href="https://github.com/koltregaskes/tools-hub">Open The Repo</a>
+          <a class="button button--ghost" href="#top">Back To Top</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Tools Hub</p>
+      <p>Built as a public-facing tools page with room for live apps, docs, screenshots, and future launches.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
