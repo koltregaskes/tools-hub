@@ -1,0 +1,37 @@
+<svg width="960" height="1080" viewBox="0 0 960 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="1080" fill="#07111E"/>
+  <rect x="48" y="48" width="864" height="984" rx="36" fill="url(#bg)"/>
+  <rect x="118" y="148" width="724" height="784" rx="28" fill="#F4F1E8"/>
+  <rect x="160" y="202" width="198" height="676" rx="24" fill="#0F2437"/>
+  <rect x="390" y="202" width="408" height="676" rx="24" fill="#FBF8F0"/>
+  <rect x="188" y="238" width="142" height="22" rx="11" fill="#6ED7D1" opacity="0.9"/>
+  <rect x="188" y="286" width="116" height="16" rx="8" fill="#DCE8F0" opacity="0.9"/>
+  <rect x="188" y="332" width="120" height="120" rx="18" fill="#14314A"/>
+  <rect x="188" y="474" width="142" height="18" rx="9" fill="#DCE8F0" opacity="0.92"/>
+  <rect x="188" y="520" width="126" height="18" rx="9" fill="#DCE8F0" opacity="0.76"/>
+  <rect x="188" y="566" width="132" height="18" rx="9" fill="#DCE8F0" opacity="0.76"/>
+  <rect x="188" y="638" width="142" height="86" rx="18" fill="#183A55"/>
+  <rect x="418" y="246" width="164" height="24" rx="12" fill="#10263A"/>
+  <rect x="418" y="292" width="132" height="16" rx="8" fill="#8AA3B6"/>
+  <rect x="418" y="356" width="352" height="14" rx="7" fill="#2D4354" opacity="0.9"/>
+  <rect x="418" y="394" width="330" height="14" rx="7" fill="#2D4354" opacity="0.68"/>
+  <rect x="418" y="432" width="344" height="14" rx="7" fill="#2D4354" opacity="0.68"/>
+  <rect x="418" y="470" width="298" height="14" rx="7" fill="#2D4354" opacity="0.68"/>
+  <rect x="418" y="542" width="324" height="14" rx="7" fill="#2D4354" opacity="0.78"/>
+  <rect x="418" y="580" width="348" height="14" rx="7" fill="#2D4354" opacity="0.62"/>
+  <rect x="418" y="618" width="286" height="14" rx="7" fill="#2D4354" opacity="0.62"/>
+  <rect x="418" y="690" width="164" height="86" rx="20" fill="#E7F7F5"/>
+  <rect x="606" y="690" width="164" height="86" rx="20" fill="#FFF0D6"/>
+  <path d="M606 114L706 114" stroke="#6ED7D1" stroke-width="8" stroke-linecap="round"/>
+  <path d="M742 114L812 114" stroke="#F4BA62" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 114L264 114" stroke="#B6C6D3" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  <text x="118" y="982" fill="#F4F1E8" font-family="Space Grotesk, Arial, sans-serif" font-size="54" font-weight="700">SYNCPAD</text>
+  <text x="118" y="1018" fill="#B6C6D3" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="500">Private notes, live across your own devices</text>
+  <defs>
+    <linearGradient id="bg" x1="48" y1="48" x2="912" y2="1032" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102235"/>
+      <stop offset="0.55" stop-color="#16324A"/>
+      <stop offset="1" stop-color="#1B3D57"/>
+    </linearGradient>
+  </defs>
+</svg>
