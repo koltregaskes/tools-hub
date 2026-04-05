@@ -24,5 +24,6 @@ This repo is the GitHub Pages version of the hub, so it stays static and public-
 
 - This repo does not run local `.cmd` launchers
 - It is designed for GitHub Pages and public browsing
+- It is now installable as a lightweight PWA for quick access on desktop or Android
 - Private tools can be featured here safely as long as the page only exposes repo, docs, or release links
 - The visual direction intentionally follows the feel of the Games Hub while staying tools-only
