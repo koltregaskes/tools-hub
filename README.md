@@ -1,6 +1,6 @@
-# Tools Hub
+# Tools Hub by Elusion Works
 
-A public-facing tools page built in the same broad spirit as the Games Hub, but focused entirely on the tool stack.
+A public-facing tools page for the Elusion Works tool stack, built in the same broad spirit as the Games Hub.
 
 This repo is the GitHub Pages version of the hub, so it stays static and public-safe while the separate local launcher hub remains the machine-side app that actually opens tools on Windows.
 

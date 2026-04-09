@@ -1,7 +1,7 @@
 {
-  "name": "Tools Hub",
-  "short_name": "Tools Hub",
-  "description": "A public-facing tools hub for planning, publishing, and music tools built by Kol Tregaskes.",
+  "name": "Tools Hub by Elusion Works",
+  "short_name": "Elusion",
+  "description": "A public-facing tools hub for planning, publishing, and music tools built by Elusion Works.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
