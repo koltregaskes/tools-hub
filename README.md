@@ -36,6 +36,13 @@ This repo is the GitHub Pages version of the hub, so it stays static and public-
 - The visual direction intentionally follows the feel of the Games Hub while staying tools-only
 - The hub should feel like a premium launch surface, not a scratchpad
 
+## Future Releases
+
+- Music Video Generator
+- Comic Book Generator
+- Comic Book Video Generator
+- Creative Canvas Editor
+
 ## Local-Only Files
 
 - `.autolab/` is used for internal AutoResearch and should remain untracked
