@@ -4,6 +4,13 @@ A public-facing tools page built in the same broad spirit as the Games Hub, but 
 
 This repo is the GitHub Pages version of the hub, so it stays static and public-safe while the separate local launcher hub remains the machine-side app that actually opens tools on Windows.
 
+## Public vs Private
+
+- This repo is public-facing only.
+- Any private launcher or manager console belongs in a separate local-only `local-hub/` workspace.
+- Do not commit machine-local launchers, evidence captures, or planning notes here.
+- Keep this repo safe for GitHub Pages and public browsing.
+
 ## Included Tools
 
 - Canvas Planner
@@ -34,3 +41,9 @@ This repo is the GitHub Pages version of the hub, so it stays static and public-
 - `.autolab/` is used for internal AutoResearch and should remain untracked
 - `.env*` files are local-only
 - `.local/` and `*.local.md` are for planning notes and are ignored
+
+## Contributor Notes
+
+- Treat this as a showcase surface, not an operations dashboard.
+- If a change only helps local management, it belongs in the private hub instead.
+- Keep the public/private boundary obvious in both docs and code.
