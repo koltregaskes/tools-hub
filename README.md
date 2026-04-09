@@ -27,3 +27,10 @@ This repo is the GitHub Pages version of the hub, so it stays static and public-
 - It is now installable as a lightweight PWA for quick access on desktop or Android
 - Private tools can be featured here safely as long as the page only exposes repo, docs, or release links
 - The visual direction intentionally follows the feel of the Games Hub while staying tools-only
+- The hub should feel like a premium launch surface, not a scratchpad
+
+## Local-Only Files
+
+- `.autolab/` is used for internal AutoResearch and should remain untracked
+- `.env*` files are local-only
+- `.local/` and `*.local.md` are for planning notes and are ignored
