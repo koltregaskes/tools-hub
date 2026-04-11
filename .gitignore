@@ -13,6 +13,8 @@ planning-local/
 tmp-*.png
 tmp-*.jpg
 tmp-*.jpeg
+tmp-*.out
+tmp-*.err
 *.tmp
 *.bak
 *.backup
