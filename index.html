@@ -3,387 +3,704 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elusion Works // Tools Hub</title>
-    <meta
-      name="description"
-      content="Elusion Works presents a public-facing tools hub for planning, publishing, and music tools."
-    />
-    <meta property="og:title" content="Tools Hub by Elusion Works" />
-    <meta
-      property="og:description"
-      content="A clean public front door for the practical tools Elusion Works is building across planning, publishing, and music."
-    />
+    <title>StackScout // Home</title>
+    <meta name="description" content="StackScout tracks the tools, services, APIs, MCPs, CLIs, and workbench apps worth a builder&#39;s attention." />
+    <meta property="og:title" content="StackScout // Home" />
+    <meta property="og:description" content="StackScout tracks the tools, services, APIs, MCPs, CLIs, and workbench apps worth a builder&#39;s attention." />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#09111f" />
-    <link rel="icon" type="image/svg+xml" href="icon.svg" />
-    <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0a100c" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <link rel="manifest" href="./manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body data-page="home" data-site-root="./">
     <div class="atmosphere" aria-hidden="true">
-      <div class="atmosphere__orb atmosphere__orb--cyan"></div>
-      <div class="atmosphere__orb atmosphere__orb--crimson"></div>
-      <div class="atmosphere__orb atmosphere__orb--gold"></div>
       <div class="atmosphere__grid"></div>
+      <div class="atmosphere__ring atmosphere__ring--one"></div>
+      <div class="atmosphere__ring atmosphere__ring--two"></div>
+      <div class="atmosphere__flare atmosphere__flare--acid"></div>
+      <div class="atmosphere__flare atmosphere__flare--ice"></div>
+      <div class="atmosphere__flare atmosphere__flare--ember"></div>
     </div>
-
     <header class="site-header">
-      <a class="site-brand" href="#top">Elusion Works</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#lineup">Lineup</a>
-        <a href="#approach">Approach</a>
-        <a href="#future">Future Releases</a>
-      </nav>
+      <a class="site-brand" href="./">
+        <span class="site-brand__mark">S</span>
+        <span>StackScout</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary"><a href="./" aria-current="page">Home</a><a href="./catalog/">Catalog</a><a href="./categories/">Categories</a><a href="./updates/">Updates</a><a href="./radar/">Radar</a><a href="./collections/">Collections</a><a href="./method/">Method</a></nav>
     </header>
-
-    <main id="top">
-      <section class="hero">
+    <main class="page-shell">
+      <section class="hero hero--home">
         <div class="hero__copy" data-reveal>
-          <p class="eyebrow">Public Tools Hub // Elusion Works</p>
-          <h1>Small tools. Sharp workflows. Real utility.</h1>
-          <p class="hero__lede">
-            This is the public front door for the tool stack: visual planning, daily batch tracking, creator
-            scheduling, trailer packaging, private note-taking, and the evolving coded-music studio. Most of the web
-            tools here can now install cleanly on desktop or Android as lightweight PWAs. The goal is a premium launch
-            surface, not a scratchpad.
-          </p>
+          <p class="eyebrow">Curated ecosystem // tools, systems, and builder intelligence</p>
+          <h1>A cleaner way to track the tools actually shaping modern workflows.</h1>
+          <p class="hero__lede">StackScout is the public-facing scout deck for fast-moving builder infrastructure: websites, web services, APIs, MCPs, CLIs, and a smaller lab lane for the tools we are building ourselves. It is curated, selective, and designed to stay useful rather than exhaustive.</p>
           <div class="hero__actions">
-            <a class="button button--primary" href="#lineup">Browse The Tools</a>
-            <a class="button button--ghost" href="https://github.com/koltregaskes/tools-hub">View Repository</a>
-            <button id="installAppBtn" class="button button--ghost" type="button" hidden>Install Hub</button>
+            <a class="button button--primary" href="./catalog/">Explore catalog</a>
+            <a class="button button--ghost" href="./updates/">See updates</a>
+            <button id="installAppBtn" class="button button--ghost" type="button" hidden>Install site</button>
           </div>
-          <ul class="hero__facts" aria-label="Hub facts">
-            <li>6 active tools</li>
-            <li>Planning, publishing, music, and private productivity workflows</li>
-            <li>Installable web apps where that makes sense, private desktop paths where it does not</li>
-          </ul>
+          <ul class="hero__facts"><li>Curated ecosystem first, not an everything directory</li><li>Badges and freshness over fake precision scoring</li><li>Official links, update trails, and use-case context in one place</li></ul>
         </div>
-
-        <div class="hero__visual" data-reveal>
-          <div class="hero-stack">
-            <article class="hero-stack__card hero-stack__card--front">
-              <img src="assets/canvas-planner.svg" alt="Canvas Planner preview art" />
-              <div class="hero-stack__meta">
-                <span>Planning tool</span>
-                <strong>Canvas Planner</strong>
-              </div>
-            </article>
-            <article class="hero-stack__card hero-stack__card--left">
-              <img src="assets/strudel-studio.svg" alt="Strudel Studio preview art" />
-            </article>
-            <article class="hero-stack__card hero-stack__card--right">
-              <img src="assets/mj-calendar.svg" alt="MJ Calendar preview art" />
-            </article>
+        <div class="hero__rail" data-reveal>
+          <div class="hero-stat">
+            <span class="label">Tracked</span>
+            <strong>14</strong>
+            <p>10 ecosystem picks and 4 lab entries.</p>
+          </div>
+          <div class="hero-stat">
+            <span class="label">Freshest signal</span>
+            <strong>17 Apr 2026</strong>
+            <p>Make opened its CLI to all users</p>
+          </div>
+          <div class="hero-stat">
+            <span class="label">Public promise</span>
+            <strong>No fake telemetry</strong>
+            <p>Every item carries a visible source and date.</p>
           </div>
         </div>
       </section>
 
-      <section class="studio-strip" aria-label="Hub status" data-reveal>
+      <section class="section-block" data-reveal>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Featured tools this week</p>
+            <h2>The current front line.</h2>
+          </div>
+          <p class="section-copy">A rotating set of ecosystem tools that feel especially relevant right now.</p>
+        </div>
+        <div class="card-grid card-grid--featured">
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="Website"
+      data-category="websites"
+      data-pricing="Freemium / Usage-based"
+      data-badge="Recommended"
+      data-date="2026-04-15"
+      data-priority="4"
+      data-search="Hugging Face The strongest public hub for models, datasets, Spaces, open-source research, and fast-moving AI tooling infrastructure. Hugging Face The April 2026 Hub changelog added Kernels and expanded agent traces, which keeps pushing Hugging Face deeper into agent-friendly infrastructure. models datasets spaces open source ai">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--websites">
+        <span>HU</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Website / Websites</p>
+        <h3>Hugging Face</h3>
+        <p class="summary">The strongest public hub for models, datasets, Spaces, open-source research, and fast-moving AI tooling infrastructure.</p>
+        <p class="card-note">The April 2026 Hub changelog added Kernels and expanded agent traces, which keeps pushing Hugging Face deeper into agent-friendly infrastructure.</p>
+        <div class="chip-row"><span class="chip chip--ink">model discovery</span><span class="chip chip--ink">open-source ai</span><span class="chip chip--ink">spaces and demos</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>Hugging Face</span>
+        <span>15 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./tools/hugging-face/">Open dossier</a>
+        <a class="button button--ghost" href="https://huggingface.co/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="API"
+      data-category="apis"
+      data-pricing="Usage-based"
+      data-badge="Recommended"
+      data-date="2026-03-05"
+      data-priority="4"
+      data-search="OpenAI API A frontier model API stack that increasingly optimizes for real agent workflows, tool use, and professional work products. OpenAI GPT-5.4 launched on March 5, 2026 with native computer use, tool search, and 1M-token context for longer-horizon workflows. api llm agents tool use computer use">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--apis">
+        <span>OP</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">API / APIs</p>
+        <h3>OpenAI API</h3>
+        <p class="summary">A frontier model API stack that increasingly optimizes for real agent workflows, tool use, and professional work products.</p>
+        <p class="card-note">GPT-5.4 launched on March 5, 2026 with native computer use, tool search, and 1M-token context for longer-horizon workflows.</p>
+        <div class="chip-row"><span class="chip chip--ink">agent systems</span><span class="chip chip--ink">tool use</span><span class="chip chip--ink">professional workflows</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>OpenAI</span>
+        <span>5 Mar 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./tools/openai-api/">Open dossier</a>
+        <a class="button button--ghost" href="https://platform.openai.com/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="Web Service"
+      data-category="web-services"
+      data-pricing="Open source / Cloud plans"
+      data-badge="Specialist Pick"
+      data-date="2026-03-13"
+      data-priority="3"
+      data-search="n8n Workflow automation with a strong self-hosted story, useful AI integrations, and enough openness to stay flexible under real operator control. n8n The March 2026 release line kept moving quickly, while docs and blog coverage emphasized external secrets support and steady 1.12x releases. automation workflows self-hosted agents integrations">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--blue">Specialist Pick</span>
+      </div>
+      <div class="signal-mark signal-mark--web-services">
+        <span>N8</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web Service / Web Services</p>
+        <h3>n8n</h3>
+        <p class="summary">Workflow automation with a strong self-hosted story, useful AI integrations, and enough openness to stay flexible under real operator control.</p>
+        <p class="card-note">The March 2026 release line kept moving quickly, while docs and blog coverage emphasized external secrets support and steady 1.12x releases.</p>
+        <div class="chip-row"><span class="chip chip--ink">self-hosted automation</span><span class="chip chip--ink">workflow control</span><span class="chip chip--ink">agent pipelines</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>n8n</span>
+        <span>13 Mar 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./tools/n8n/">Open dossier</a>
+        <a class="button button--ghost" href="https://n8n.io/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="MCP"
+      data-category="mcps"
+      data-pricing="Free / GitHub token required"
+      data-badge="Recommended"
+      data-date="2026-04-16"
+      data-priority="4"
+      data-search="GitHub MCP Server GitHub&#39;s official MCP server brings repositories, issues, pull requests, actions, and related workflows directly into agent loops. GitHub The official server hit v1.0.0 on April 16, 2026, adding granular issue field tooling and formalizing MCP Apps feature-flag support. mcp github repos issues agent workflows">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--mcps">
+        <span>GI</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">MCP / MCPs</p>
+        <h3>GitHub MCP Server</h3>
+        <p class="summary">GitHub&#39;s official MCP server brings repositories, issues, pull requests, actions, and related workflows directly into agent loops.</p>
+        <p class="card-note">The official server hit v1.0.0 on April 16, 2026, adding granular issue field tooling and formalizing MCP Apps feature-flag support.</p>
+        <div class="chip-row"><span class="chip chip--ink">repo-aware agents</span><span class="chip chip--ink">issue workflows</span><span class="chip chip--ink">developer automation</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>GitHub</span>
+        <span>16 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./tools/github-mcp-server/">Open dossier</a>
+        <a class="button button--ghost" href="https://github.com/github/github-mcp-server" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  </div>
+      </section>
+
+      <section class="section-block" data-reveal>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Categories</p>
+            <h2>Find a lane before you drown in tabs.</h2>
+          </div>
+          <p class="section-copy">StackScout works best when you enter through a workflow lane, not a random pile of names.</p>
+        </div>
+        <div class="card-grid card-grid--categories">
+          
+    <article class="scout-card scout-card--category">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Category</span>
+        <span class="pill pill--blue">2 tracked</span>
+      </div>
+      <div class="signal-mark signal-mark--websites signal-mark--plain">
+        <span>W</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Public lane</p>
+        <h3>Websites</h3>
+        <p class="summary">Browser-first products and hubs that are useful on their own, not just as a wrapper around an API.</p>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./categories/websites/">Open category</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--category">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Category</span>
+        <span class="pill pill--blue">2 tracked</span>
+      </div>
+      <div class="signal-mark signal-mark--web-services signal-mark--plain">
+        <span>W</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Public lane</p>
+        <h3>Web Services</h3>
+        <p class="summary">Hosted workflow and automation platforms that carry real operational value without requiring a local runtime first.</p>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./categories/web-services/">Open category</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--category">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Category</span>
+        <span class="pill pill--blue">2 tracked</span>
+      </div>
+      <div class="signal-mark signal-mark--apis signal-mark--plain">
+        <span>A</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Public lane</p>
+        <h3>APIs</h3>
+        <p class="summary">Platform surfaces for shipping structured AI, automation, and developer workflows.</p>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./categories/apis/">Open category</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--category">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Category</span>
+        <span class="pill pill--blue">2 tracked</span>
+      </div>
+      <div class="signal-mark signal-mark--mcps signal-mark--plain">
+        <span>M</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Public lane</p>
+        <h3>MCPs</h3>
+        <p class="summary">Model Context Protocol servers and bridges that turn static assistants into tool-using systems.</p>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./categories/mcps/">Open category</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--category">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Category</span>
+        <span class="pill pill--blue">2 tracked</span>
+      </div>
+      <div class="signal-mark signal-mark--clis signal-mark--plain">
+        <span>C</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Public lane</p>
+        <h3>CLIs</h3>
+        <p class="summary">Command-line tools that earn a place in a serious builder workflow.</p>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./categories/clis/">Open category</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--category">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Category</span>
+        <span class="pill pill--blue">3 tracked</span>
+      </div>
+      <div class="signal-mark signal-mark--web-apps signal-mark--plain">
+        <span>W</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Public lane</p>
+        <h3>Web Apps</h3>
+        <p class="summary">Focused public-facing applications that sit closer to products than infrastructure.</p>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./categories/web-apps/">Open category</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--category">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Category</span>
+        <span class="pill pill--blue">1 tracked</span>
+      </div>
+      <div class="signal-mark signal-mark--desktop-apps signal-mark--plain">
+        <span>D</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Public lane</p>
+        <h3>Desktop Apps</h3>
+        <p class="summary">Private or local-first desktop surfaces that are notable enough to track publicly.</p>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./categories/desktop-apps/">Open category</a>
+      </div>
+    </article>
+  
+        </div>
+      </section>
+
+      <section class="section-block" data-reveal>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Streaming activity</p>
+            <h2>What moved recently.</h2>
+          </div>
+          <p class="section-copy">A lighter public activity stream sourced from official changelogs, release notes, blogs, and first-party repos.</p>
+        </div>
+        <div class="activity-grid">
+          
+    <article class="activity-card activity-card--compact">
+      <div class="activity-card__head">
         <div>
-          <span class="studio-strip__label">Status</span>
-          <strong>Active tool build-out</strong>
+          <p class="label">Web Service / Make</p>
+          <h3>Make opened its CLI to all users</h3>
         </div>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <p class="summary">Make&#39;s 2026 release notes show the Make CLI becoming available to all users, continuing the platform&#39;s expansion beyond the browser UI.</p>
+      <div class="activity-card__meta">
+        <span>17 Apr 2026</span>
+        <span>Make 2026 Release Notes</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--ghost" href="./tools/make/">Tool page</a>
+        <a class="button button--ghost" href="https://help.make.com/2026" target="_blank" rel="noreferrer">Source</a>
+      </div>
+    </article>
+  
+    <article class="activity-card activity-card--compact">
+      <div class="activity-card__head">
         <div>
-          <span class="studio-strip__label">Public layer</span>
-          <strong>Live GitHub Pages links</strong>
+          <p class="label">MCP / GitHub MCP Server</p>
+          <h3>GitHub MCP Server reached 1.0.0</h3>
         </div>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <p class="summary">The official GitHub MCP server hit 1.0.0 with granular issue field tooling and broader MCP Apps support behind feature flags.</p>
+      <div class="activity-card__meta">
+        <span>16 Apr 2026</span>
+        <span>GitHub MCP Server Releases</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--ghost" href="./tools/github-mcp-server/">Tool page</a>
+        <a class="button button--ghost" href="https://github.com/github/github-mcp-server/releases" target="_blank" rel="noreferrer">Source</a>
+      </div>
+    </article>
+  
+    <article class="activity-card activity-card--compact">
+      <div class="activity-card__head">
         <div>
-          <span class="studio-strip__label">Next unlock</span>
-          <strong>Deeper product pages, screenshots, and final polish</strong>
+          <p class="label">CLI / GitHub CLI</p>
+          <h3>GitHub CLI 2.90.0 introduced `gh skill` in public preview</h3>
+        </div>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <p class="summary">The latest GitHub CLI release adds search, install, preview, update, and publish flows for portable agent skills.</p>
+      <div class="activity-card__meta">
+        <span>16 Apr 2026</span>
+        <span>GitHub CLI Releases</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--ghost" href="./tools/gh-cli/">Tool page</a>
+        <a class="button button--ghost" href="https://github.com/cli/cli/releases" target="_blank" rel="noreferrer">Source</a>
+      </div>
+    </article>
+  
+    <article class="activity-card activity-card--compact">
+      <div class="activity-card__head">
+        <div>
+          <p class="label">Website / Hugging Face</p>
+          <h3>Hugging Face added Kernels to the Hub</h3>
+        </div>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <p class="summary">The Hub changelog added Kernels as a new way to browse precompiled, hardware-specific kernels and also continues to push agent traces into the product story.</p>
+      <div class="activity-card__meta">
+        <span>15 Apr 2026</span>
+        <span>Hugging Face Changelog</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--ghost" href="./tools/hugging-face/">Tool page</a>
+        <a class="button button--ghost" href="https://huggingface.co/changelog" target="_blank" rel="noreferrer">Source</a>
+      </div>
+    </article>
+  
+    <article class="activity-card activity-card--compact">
+      <div class="activity-card__head">
+        <div>
+          <p class="label">Web App / Strudel Studio</p>
+          <h3>Strudel Studio&#39;s latest public pass focused on smoke-run reliability</h3>
+        </div>
+        <span class="pill pill--amber">Worth Watching</span>
+      </div>
+      <p class="summary">The recent manager-side pass caught and fixed a release-smoke issue while keeping the studio workflow moving forward.</p>
+      <div class="activity-card__meta">
+        <span>12 Apr 2026</span>
+        <span>Strudel Studio Repository</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--ghost" href="./tools/strudel-studio/">Tool page</a>
+        <a class="button button--ghost" href="https://github.com/koltregaskes/strudel-studio" target="_blank" rel="noreferrer">Source</a>
+      </div>
+    </article>
+  
+    <article class="activity-card activity-card--compact">
+      <div class="activity-card__head">
+        <div>
+          <p class="label">Web App / Canvas Planner</p>
+          <h3>Canvas Planner stayed clean and review-ready in its latest public pass</h3>
+        </div>
+        <span class="pill pill--violet">Early but Promising</span>
+      </div>
+      <p class="summary">The latest public-ready manager pass kept the board surface fast and uncluttered while tightening browser behavior.</p>
+      <div class="activity-card__meta">
+        <span>11 Apr 2026</span>
+        <span>Canvas Planner Repository</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--ghost" href="./tools/canvas-planner/">Tool page</a>
+        <a class="button button--ghost" href="https://github.com/koltregaskes/canvas-planner" target="_blank" rel="noreferrer">Source</a>
+      </div>
+    </article>
+  
         </div>
       </section>
 
-      <section class="lineup" id="lineup">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow">Current Lineup</p>
-          <h2>Six tools, six different jobs, one cleaner front door.</h2>
-          <p>
-            The hub is designed to hold the growing tool stack over time. Right now it introduces the main working
-            tools and gives each one enough room to feel distinct.
-          </p>
+      <section class="section-block" data-reveal>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">From the lab</p>
+            <h2>A clearly labelled subset of our own tools.</h2>
+          </div>
+          <p class="section-copy">These sit alongside the broader ecosystem rather than replacing it.</p>
         </div>
-
-        <article class="feature feature--split" id="canvas-planner" data-reveal>
-          <a class="feature__art feature__art-link" href="https://koltregaskes.github.io/canvas-planner/">
-            <img src="assets/canvas-planner.svg" alt="Canvas Planner poster art" />
-          </a>
-          <div class="feature__copy">
-            <p class="feature__kicker">Planning Tool</p>
-            <h3>Canvas Planner</h3>
-            <p class="feature__summary">
-              A visual planning surface for shaping image campaigns, boards, and task flow without getting buried in a
-              generic project manager.
-            </p>
-            <ul class="feature__list">
-              <li>Focused board-style workflow for visual work</li>
-              <li>Clean local planning surface for batches and next actions</li>
-              <li>Strong candidate for later hub-system migration</li>
-            </ul>
-            <dl class="feature__meta">
-              <div>
-                <dt>Status</dt>
-                <dd>Active local tool</dd>
-              </div>
-              <div>
-                <dt>Platform</dt>
-                <dd>Web app + installable PWA</dd>
-              </div>
-              <div>
-                <dt>Public rollout</dt>
-                <dd>Live page, repo, and installable shell active</dd>
-              </div>
-            </dl>
-            <div class="feature__actions">
-              <a class="button button--primary" href="https://koltregaskes.github.io/canvas-planner/">Open Live Tool</a>
-              <a class="button button--ghost" href="https://github.com/koltregaskes/canvas-planner">View Repo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="feature feature--reverse" id="mj-calendar" data-reveal>
-          <a class="feature__art feature__art-link" href="https://koltregaskes.github.io/mj-calendar/">
-            <img src="assets/mj-calendar.svg" alt="MJ Calendar poster art" />
-          </a>
-          <div class="feature__copy">
-            <p class="feature__kicker">Planning Tool</p>
-            <h3>MJ Calendar</h3>
-            <p class="feature__summary">
-              A daily checklist calendar built around the real Midjourney batch flow: review images, videos,
-              upscales, publish, and any extra recurring stages you need.
-            </p>
-            <ul class="feature__list">
-              <li>Simple daily workflow tracking with notes</li>
-              <li>Restore the standard review pipeline at any time</li>
-              <li>Made for repeat batch work rather than generic scheduling</li>
-            </ul>
-            <dl class="feature__meta">
-              <div>
-                <dt>Status</dt>
-                <dd>Useful local tool</dd>
-              </div>
-              <div>
-                <dt>Platform</dt>
-                <dd>Browser + installable PWA</dd>
-              </div>
-              <div>
-                <dt>Public rollout</dt>
-                <dd>Live page, repo, and installable shell active</dd>
-              </div>
-            </dl>
-            <div class="feature__actions">
-              <a class="button button--primary" href="https://koltregaskes.github.io/mj-calendar/">Open Live Tool</a>
-              <a class="button button--ghost" href="https://github.com/koltregaskes/mj-calendar">View Repo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="feature feature--split" id="signal-stack" data-reveal>
-          <a class="feature__art feature__art-link" href="https://koltregaskes.github.io/signal-stack/">
-            <img src="assets/signal-stack.svg" alt="Signal Stack poster art" />
-          </a>
-          <div class="feature__copy">
-            <p class="feature__kicker">Publishing Tool</p>
-            <h3>Signal Stack</h3>
-            <p class="feature__summary">
-              A creator scheduling tool aimed at image and video publishing for Instagram, TikTok, and YouTube rather
-              than the text-first planning tools already handled elsewhere.
-            </p>
-            <ul class="feature__list">
-              <li>Offline-first queue builder with export and import</li>
-              <li>Focused on visual and video publishing workflows</li>
-              <li>Another strong candidate for later hub-system migration</li>
-            </ul>
-            <dl class="feature__meta">
-              <div>
-                <dt>Status</dt>
-                <dd>Launchable local scheduler</dd>
-              </div>
-              <div>
-                <dt>Platform</dt>
-                <dd>Browser</dd>
-              </div>
-              <div>
-                <dt>Public rollout</dt>
-                <dd>Repo and concept page ready</dd>
-              </div>
-            </dl>
-            <div class="feature__actions">
-              <a class="button button--primary" href="https://koltregaskes.github.io/signal-stack/">Open Live Tool</a>
-              <a class="button button--ghost" href="https://github.com/koltregaskes/signal-stack">View Repo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="feature feature--reverse" id="trailer-creator" data-reveal>
-          <a class="feature__art feature__art-link" href="https://koltregaskes.github.io/trailer-creator/">
-            <img src="assets/trailer-creator.svg" alt="Trailer Creator poster art" />
-          </a>
-          <div class="feature__copy">
-            <p class="feature__kicker">Publishing Tool</p>
-            <h3>Trailer Creator</h3>
-            <p class="feature__summary">
-              A dossier-style workspace for shaping story notes, lore fragments, narration ideas, and trailer structure
-              into something usable for packaging a release.
-            </p>
-            <ul class="feature__list">
-              <li>Built around trailer hooks and supporting material</li>
-              <li>Useful for turning fragments into a coherent package</li>
-              <li>Designed as a practical internal utility, not just a showcase</li>
-            </ul>
-            <dl class="feature__meta">
-              <div>
-                <dt>Status</dt>
-                <dd>Working local tool</dd>
-              </div>
-              <div>
-                <dt>Platform</dt>
-                <dd>Browser + installable PWA</dd>
-              </div>
-              <div>
-                <dt>Public rollout</dt>
-                <dd>Live page, repo, and installable shell active</dd>
-              </div>
-            </dl>
-            <div class="feature__actions">
-              <a class="button button--primary" href="https://koltregaskes.github.io/trailer-creator/">Open Live Tool</a>
-              <a class="button button--ghost" href="https://github.com/koltregaskes/trailer-creator">View Repo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="feature feature--split" id="strudel-studio" data-reveal>
-          <a class="feature__art feature__art-link" href="https://koltregaskes.github.io/strudel-studio/">
-            <img src="assets/strudel-studio.svg" alt="Strudel Studio poster art" />
-          </a>
-          <div class="feature__copy">
-            <p class="feature__kicker">Music Tool</p>
-            <h3>Strudel Studio</h3>
-            <p class="feature__summary">
-              The merged direction for the Strudel work: programmable music patterns, sample chopping, scenes, and
-              recording, all moving toward one richer studio-style tool.
-            </p>
-            <ul class="feature__list">
-              <li>Code-driven music creation with a friendlier control surface</li>
-              <li>Beat designer, sample import, vocal chops, scenes, and recording</li>
-              <li>Now consolidated into one clear public Studio path</li>
-            </ul>
-            <dl class="feature__meta">
-              <div>
-                <dt>Status</dt>
-                <dd>Main public music tool</dd>
-              </div>
-              <div>
-                <dt>Platform</dt>
-                <dd>Browser</dd>
-              </div>
-              <div>
-                <dt>Public rollout</dt>
-                <dd>Live page and repo active</dd>
-              </div>
-            </dl>
-            <div class="feature__actions">
-              <a class="button button--primary" href="https://koltregaskes.github.io/strudel-studio/">Open Live Tool</a>
-              <a class="button button--ghost" href="https://github.com/koltregaskes/strudel-studio">View Repo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="feature feature--reverse" id="syncpad" data-reveal>
-          <a class="feature__art feature__art-link" href="https://github.com/koltregaskes/syncpad">
-            <img src="assets/syncpad.svg" alt="SyncPad poster art" />
-          </a>
-          <div class="feature__copy">
-            <p class="feature__kicker">Private Productivity Tool</p>
-            <h3>SyncPad</h3>
-            <p class="feature__summary">
-              A desktop-first notes app for your own devices, built to feel simple and immediate while syncing across
-              your private network through one always-on host machine.
-            </p>
-            <ul class="feature__list">
-              <li>Desktop app foundation with private live-sync mode</li>
-              <li>Markdown writing, preview, find and replace, and backup tools</li>
-              <li>Designed for personal cross-device use rather than public SaaS exposure</li>
-            </ul>
-            <dl class="feature__meta">
-              <div>
-                <dt>Status</dt>
-                <dd>Private desktop tool in active build-out</dd>
-              </div>
-              <div>
-                <dt>Platform</dt>
-                <dd>Windows app + private web client</dd>
-              </div>
-              <div>
-                <dt>Public rollout</dt>
-                <dd>Repo visible, live host kept private</dd>
-              </div>
-            </dl>
-            <div class="feature__actions">
-              <a class="button button--primary" href="https://github.com/koltregaskes/syncpad">View Repo</a>
-              <a class="button button--ghost" href="https://github.com/koltregaskes/syncpad#readme">Read Setup Notes</a>
-            </div>
-          </div>
-        </article>
+        <div class="card-grid card-grid--lab">
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="lab"
+      data-type="Web App"
+      data-category="web-apps"
+      data-pricing="Free"
+      data-badge="Early but Promising"
+      data-date="2026-04-11"
+      data-priority="1"
+      data-search="Canvas Planner A visual planning surface for boards, campaign flow, and creative work without the drag of a generic project manager. StackScout Lab The latest public-ready pass cleaned the browser surface and kept the board flow sharp without adding clutter. planning boards creative workflow pwa">
+      <div class="scout-card__topline">
+        <span class="pill pill--violet">StackScout Lab</span>
+        <span class="pill pill--violet">Early but Promising</span>
+      </div>
+      <div class="signal-mark signal-mark--web-apps">
+        <span>CA</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web App / Web Apps</p>
+        <h3>Canvas Planner</h3>
+        <p class="summary">A visual planning surface for boards, campaign flow, and creative work without the drag of a generic project manager.</p>
+        
+        <div class="chip-row"><span class="chip chip--ink">campaign planning</span><span class="chip chip--ink">creative sequencing</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>StackScout Lab</span>
+        <span>11 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./tools/canvas-planner/">Open dossier</a>
+        <a class="button button--ghost" href="https://koltregaskes.github.io/canvas-planner/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="lab"
+      data-type="Web App"
+      data-category="web-apps"
+      data-pricing="Free"
+      data-badge="Early but Promising"
+      data-date="2026-04-12"
+      data-priority="1"
+      data-search="Signal Stack A publishing planner built around image, video, and queue workflows rather than generic social-media posting dashboards. StackScout Lab The recent execution pass made delivery truth more explicit, but live platform integrations still depend on real credentials and approvals. publishing scheduling creator workflow social">
+      <div class="scout-card__topline">
+        <span class="pill pill--violet">StackScout Lab</span>
+        <span class="pill pill--violet">Early but Promising</span>
+      </div>
+      <div class="signal-mark signal-mark--web-apps">
+        <span>SI</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web App / Web Apps</p>
+        <h3>Signal Stack</h3>
+        <p class="summary">A publishing planner built around image, video, and queue workflows rather than generic social-media posting dashboards.</p>
+        
+        <div class="chip-row"><span class="chip chip--ink">creator scheduling</span><span class="chip chip--ink">queue design</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>StackScout Lab</span>
+        <span>12 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./tools/signal-stack/">Open dossier</a>
+        <a class="button button--ghost" href="https://koltregaskes.github.io/signal-stack/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="lab"
+      data-type="Web App"
+      data-category="web-apps"
+      data-pricing="Free"
+      data-badge="Worth Watching"
+      data-date="2026-04-12"
+      data-priority="2"
+      data-search="Strudel Studio A browser-based music studio path that brings programmable patterns, scenes, and samples into a clearer public-facing workflow. StackScout Lab The takeover pass tightened the smoke runner and kept the product moving toward a more serious music workspace. music browser studio coding audio">
+      <div class="scout-card__topline">
+        <span class="pill pill--violet">StackScout Lab</span>
+        <span class="pill pill--amber">Worth Watching</span>
+      </div>
+      <div class="signal-mark signal-mark--web-apps">
+        <span>ST</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web App / Web Apps</p>
+        <h3>Strudel Studio</h3>
+        <p class="summary">A browser-based music studio path that brings programmable patterns, scenes, and samples into a clearer public-facing workflow.</p>
+        
+        <div class="chip-row"><span class="chip chip--ink">browser music prototyping</span><span class="chip chip--ink">pattern-driven composition</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>StackScout Lab</span>
+        <span>12 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./tools/strudel-studio/">Open dossier</a>
+        <a class="button button--ghost" href="https://koltregaskes.github.io/strudel-studio/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="lab"
+      data-type="Desktop App"
+      data-category="desktop-apps"
+      data-pricing="Free"
+      data-badge="Early but Promising"
+      data-date="2026-04-12"
+      data-priority="1"
+      data-search="SyncPad A private, desktop-first notes tool with live sync ambitions and a workflow that stays close to the operator. StackScout Lab The browser and client surfaces are healthier, but the Electron desktop verification path is still blocked by a GPU startup issue on the manager machine. notes desktop private sync knowledge">
+      <div class="scout-card__topline">
+        <span class="pill pill--violet">StackScout Lab</span>
+        <span class="pill pill--violet">Early but Promising</span>
+      </div>
+      <div class="signal-mark signal-mark--desktop-apps">
+        <span>SY</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Desktop App / Desktop Apps</p>
+        <h3>SyncPad</h3>
+        <p class="summary">A private, desktop-first notes tool with live sync ambitions and a workflow that stays close to the operator.</p>
+        
+        <div class="chip-row"><span class="chip chip--ink">private notes</span><span class="chip chip--ink">local-first drafting</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>StackScout Lab</span>
+        <span>12 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="./tools/syncpad/">Open dossier</a>
+        <a class="button button--ghost" href="https://github.com/koltregaskes/syncpad" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  </div>
       </section>
 
-      <section class="approach" id="approach">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow">Approach</p>
-          <h2>A public shell built to expand with every finished tool.</h2>
+      <section class="section-block" data-reveal>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Collections</p>
+            <h2>Useful starting packs.</h2>
+          </div>
+          <p class="section-copy">Curated paths that are easier to share than a raw filtered search link.</p>
         </div>
-        <div class="approach__grid">
-          <article data-reveal>
-            <span class="approach__index">01</span>
-            <h3>Showcase first</h3>
-            <p>The site is already structured for richer tool pages, live demos, screenshots, and clearer public positioning as the tool stack grows.</p>
-          </article>
-          <article data-reveal>
-            <span class="approach__index">02</span>
-            <h3>PWA-ready web layer</h3>
-            <p>It still runs cleanly on GitHub Pages, but the public web tools can now install as lightweight desktop or Android apps without adding a heavy build stack.</p>
-          </article>
-          <article data-reveal>
-            <span class="approach__index">03</span>
-            <h3>Ready for upgrades</h3>
-            <p>Live app links, docs, onboarding, screenshots, feature pages, and later hub integrations can all slot in without rebuilding the whole thing.</p>
-          </article>
+        <div class="card-grid card-grid--collections">
+          
+    <article class="scout-card scout-card--collection" id="creator-stack">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Collection</span>
+        <span class="pill pill--blue">6 picks</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Use-case grouping</p>
+        <h3>Best tools for creators</h3>
+        <p class="summary">If you are building content systems, prototyping creative workflows, or stitching research into production, this is the first StackScout lane to start with.</p>
+        <div class="token-list">
+          <a class="token" href="./tools/hugging-face/">Hugging Face</a><a class="token" href="./tools/perplexity/">Perplexity</a><a class="token" href="./tools/make/">Make</a><a class="token" href="./tools/openai-api/">OpenAI API</a><a class="token" href="./tools/strudel-studio/">Strudel Studio</a><a class="token" href="./tools/canvas-planner/">Canvas Planner</a>
         </div>
-      </section>
-
-      <section class="future" id="future" data-reveal>
-        <p class="eyebrow">Future Releases</p>
-        <h2>This page becomes the release rail for every next tool.</h2>
-        <p>
-          As more tools become public-ready, this hub can carry live web links, screenshots, change notes, launch
-          writeups, and deeper product pages without needing a total redesign.
-        </p>
-        <ul class="feature__list">
-          <li>Music Video Generator</li>
-          <li>Comic Book Generator</li>
-          <li>Comic Book Video Generator</li>
-          <li>Creative Canvas Editor</li>
-        </ul>
-        <div class="future__actions">
-          <a class="button button--primary" href="https://github.com/koltregaskes/tools-hub">Open The Repo</a>
-          <a class="button button--ghost" href="#top">Back To Top</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--collection" id="mcp-starters">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Collection</span>
+        <span class="pill pill--blue">2 picks</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Use-case grouping</p>
+        <h3>Best MCPs to try</h3>
+        <p class="summary">A good starter set should teach you what MCP is actually useful for: repo intelligence, browser automation, and system-specific reach.</p>
+        <div class="token-list">
+          <a class="token" href="./tools/github-mcp-server/">GitHub MCP Server</a><a class="token" href="./tools/playwright-mcp/">Playwright MCP</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--collection" id="automation-apis">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Collection</span>
+        <span class="pill pill--blue">4 picks</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Use-case grouping</p>
+        <h3>Best APIs for automation</h3>
+        <p class="summary">This collection is biased toward agents, orchestration, and production work rather than generic chatbot embedding.</p>
+        <div class="token-list">
+          <a class="token" href="./tools/openai-api/">OpenAI API</a><a class="token" href="./tools/anthropic-api/">Anthropic API</a><a class="token" href="./tools/make/">Make</a><a class="token" href="./tools/n8n/">n8n</a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--collection" id="stackscout-lab">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Collection</span>
+        <span class="pill pill--blue">4 picks</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Use-case grouping</p>
+        <h3>From the StackScout Lab</h3>
+        <p class="summary">These are not presented as the whole point of the site. They sit alongside the wider ecosystem and earn their place separately.</p>
+        <div class="token-list">
+          <a class="token" href="./tools/canvas-planner/">Canvas Planner</a><a class="token" href="./tools/signal-stack/">Signal Stack</a><a class="token" href="./tools/strudel-studio/">Strudel Studio</a><a class="token" href="./tools/syncpad/">SyncPad</a>
+        </div>
+      </div>
+    </article>
+  
         </div>
       </section>
     </main>
-
     <footer class="site-footer">
-      <p>Elusion Works</p>
-      <p>Built as a public-facing tools page with room for live apps, docs, screenshots, and future launches.</p>
-      <p class="site-footer__legal">&copy; 2026 Kol Tregaskes. All rights reserved.</p>
+      <div>
+        <p class="site-footer__brand">StackScout</p>
+        <p>Public tool intelligence for builders, operators, and curious system nerds.</p>
+      </div>
+      <div class="site-footer__meta">
+        <p>Updated 18 Apr 2026</p>
+        <p>Public site generation from the StackScout shared source layer.</p>
+      </div>
     </footer>
-
-    <script src="pwa.js"></script>
-    <script src="app.js"></script>
+    <script src="./pwa.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>

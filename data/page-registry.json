@@ -1,0 +1,230 @@
+{
+  "title": "StackScout // Page Registry",
+  "generatedAt": "2026-04-18",
+  "pages": [
+    {
+      "key": "home",
+      "title": "Home",
+      "summary": "Editorial front door, featured tools, categories, updates, and the lab subset.",
+      "href": "./"
+    },
+    {
+      "key": "catalog",
+      "title": "Catalog",
+      "summary": "Searchable, filterable catalog of tracked tools and lab products.",
+      "href": "catalog/"
+    },
+    {
+      "key": "categories",
+      "title": "Categories",
+      "summary": "Landing page for websites, web services, APIs, MCPs, CLIs, and app lanes.",
+      "href": "categories/"
+    },
+    {
+      "key": "updates",
+      "title": "Updates",
+      "summary": "Recent public activity, releases, direction changes, and noteworthy platform moves.",
+      "href": "updates/"
+    },
+    {
+      "key": "radar",
+      "title": "Radar",
+      "summary": "The worth-watching layer for tools and systems that are not yet full recommendations.",
+      "href": "radar/"
+    },
+    {
+      "key": "collections",
+      "title": "Collections",
+      "summary": "Curated use-case groupings that make the catalog easier to navigate.",
+      "href": "collections/"
+    },
+    {
+      "key": "method",
+      "title": "Method",
+      "summary": "Public badge definitions, freshness rules, and editorial guardrails.",
+      "href": "method/"
+    },
+    {
+      "key": "category-websites",
+      "title": "Websites",
+      "summary": "Browser-first products and hubs that are useful on their own, not just as a wrapper around an API.",
+      "href": "categories/websites/",
+      "parent": "categories"
+    },
+    {
+      "key": "category-web-services",
+      "title": "Web Services",
+      "summary": "Hosted workflow and automation platforms that carry real operational value without requiring a local runtime first.",
+      "href": "categories/web-services/",
+      "parent": "categories"
+    },
+    {
+      "key": "category-apis",
+      "title": "APIs",
+      "summary": "Platform surfaces for shipping structured AI, automation, and developer workflows.",
+      "href": "categories/apis/",
+      "parent": "categories"
+    },
+    {
+      "key": "category-mcps",
+      "title": "MCPs",
+      "summary": "Model Context Protocol servers and bridges that turn static assistants into tool-using systems.",
+      "href": "categories/mcps/",
+      "parent": "categories"
+    },
+    {
+      "key": "category-clis",
+      "title": "CLIs",
+      "summary": "Command-line tools that earn a place in a serious builder workflow.",
+      "href": "categories/clis/",
+      "parent": "categories"
+    },
+    {
+      "key": "category-web-apps",
+      "title": "Web Apps",
+      "summary": "Focused public-facing applications that sit closer to products than infrastructure.",
+      "href": "categories/web-apps/",
+      "parent": "categories"
+    },
+    {
+      "key": "category-desktop-apps",
+      "title": "Desktop Apps",
+      "summary": "Private or local-first desktop surfaces that are notable enough to track publicly.",
+      "href": "categories/desktop-apps/",
+      "parent": "categories"
+    },
+    {
+      "key": "collection-creator-stack",
+      "title": "Best tools for creators",
+      "summary": "A practical mix for publishing, generation, research, and creative flow.",
+      "href": "collections/index.html#creator-stack",
+      "parent": "collections"
+    },
+    {
+      "key": "collection-mcp-starters",
+      "title": "Best MCPs to try",
+      "summary": "The MCP servers that are easiest to justify in a real builder workflow right now.",
+      "href": "collections/index.html#mcp-starters",
+      "parent": "collections"
+    },
+    {
+      "key": "collection-automation-apis",
+      "title": "Best APIs for automation",
+      "summary": "The model and platform APIs that matter when your workflows need structured output, tool use, and long-horizon reasoning.",
+      "href": "collections/index.html#automation-apis",
+      "parent": "collections"
+    },
+    {
+      "key": "collection-offline-friendly",
+      "title": "Best offline-friendly tools",
+      "summary": "Local or local-first tools that stay useful even when the browser tabs are closed.",
+      "href": "collections/index.html#offline-friendly",
+      "parent": "collections"
+    },
+    {
+      "key": "collection-stackscout-lab",
+      "title": "From the StackScout Lab",
+      "summary": "A clearly labelled subset of the tools we are building ourselves.",
+      "href": "collections/index.html#stackscout-lab",
+      "parent": "collections"
+    },
+    {
+      "key": "tool-perplexity",
+      "title": "Perplexity",
+      "summary": "Fast web-native AI research with a public-facing product direction that increasingly spills into APIs and device integrations.",
+      "href": "tools/perplexity/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-hugging-face",
+      "title": "Hugging Face",
+      "summary": "The strongest public hub for models, datasets, Spaces, open-source research, and fast-moving AI tooling infrastructure.",
+      "href": "tools/hugging-face/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-n8n",
+      "title": "n8n",
+      "summary": "Workflow automation with a strong self-hosted story, useful AI integrations, and enough openness to stay flexible under real operator control.",
+      "href": "tools/n8n/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-make",
+      "title": "Make",
+      "summary": "A polished hosted automation platform that is shipping quickly into agents, credential collection, and MCP-shaped workflows.",
+      "href": "tools/make/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-openai-api",
+      "title": "OpenAI API",
+      "summary": "A frontier model API stack that increasingly optimizes for real agent workflows, tool use, and professional work products.",
+      "href": "tools/openai-api/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-anthropic-api",
+      "title": "Anthropic API",
+      "summary": "A strong API lane for Claude-based reasoning, long context, and enterprise-facing agent workflows with a rapidly expanding model lineup.",
+      "href": "tools/anthropic-api/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-github-mcp-server",
+      "title": "GitHub MCP Server",
+      "summary": "GitHub's official MCP server brings repositories, issues, pull requests, actions, and related workflows directly into agent loops.",
+      "href": "tools/github-mcp-server/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-playwright-mcp",
+      "title": "Playwright MCP",
+      "summary": "Structured browser automation for agents, backed by Playwright's accessibility-first interaction model and official docs.",
+      "href": "tools/playwright-mcp/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-gh-cli",
+      "title": "GitHub CLI",
+      "summary": "Still one of the best developer CLIs going, and now clearly leaning into agent skills and official extension ergonomics.",
+      "href": "tools/gh-cli/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-wrangler",
+      "title": "Wrangler",
+      "summary": "Cloudflare's command-line surface for Workers keeps absorbing more platform breadth without losing its day-to-day usefulness.",
+      "href": "tools/wrangler/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-canvas-planner",
+      "title": "Canvas Planner",
+      "summary": "A visual planning surface for boards, campaign flow, and creative work without the drag of a generic project manager.",
+      "href": "tools/canvas-planner/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-signal-stack",
+      "title": "Signal Stack",
+      "summary": "A publishing planner built around image, video, and queue workflows rather than generic social-media posting dashboards.",
+      "href": "tools/signal-stack/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-strudel-studio",
+      "title": "Strudel Studio",
+      "summary": "A browser-based music studio path that brings programmable patterns, scenes, and samples into a clearer public-facing workflow.",
+      "href": "tools/strudel-studio/",
+      "parent": "catalog"
+    },
+    {
+      "key": "tool-syncpad",
+      "title": "SyncPad",
+      "summary": "A private, desktop-first notes tool with live sync ambitions and a workflow that stays close to the operator.",
+      "href": "tools/syncpad/",
+      "parent": "catalog"
+    }
+  ]
+}

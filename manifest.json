@@ -1,12 +1,12 @@
 {
-  "name": "Tools Hub by Elusion Works",
-  "short_name": "Elusion",
-  "description": "A public-facing tools hub for planning, publishing, and music tools built by Elusion Works.",
+  "name": "StackScout",
+  "short_name": "Scout",
+  "description": "A curated public guide to the builder tools, services, APIs, MCPs, and CLIs worth following.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#09111f",
-  "theme_color": "#09111f",
+  "background_color": "#07100b",
+  "theme_color": "#0a100c",
   "icons": [
     {
       "src": "icon.svg",

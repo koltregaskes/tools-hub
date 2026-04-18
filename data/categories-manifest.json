@@ -1,0 +1,56 @@
+{
+  "title": "StackScout // Categories",
+  "generatedAt": "2026-04-18",
+  "updatedAt": "2026-04-18",
+  "categories": [
+    {
+      "slug": "websites",
+      "title": "Websites",
+      "description": "Browser-first products and hubs that are useful on their own, not just as a wrapper around an API.",
+      "count": 2,
+      "href": "categories/websites/"
+    },
+    {
+      "slug": "web-services",
+      "title": "Web Services",
+      "description": "Hosted workflow and automation platforms that carry real operational value without requiring a local runtime first.",
+      "count": 2,
+      "href": "categories/web-services/"
+    },
+    {
+      "slug": "apis",
+      "title": "APIs",
+      "description": "Platform surfaces for shipping structured AI, automation, and developer workflows.",
+      "count": 2,
+      "href": "categories/apis/"
+    },
+    {
+      "slug": "mcps",
+      "title": "MCPs",
+      "description": "Model Context Protocol servers and bridges that turn static assistants into tool-using systems.",
+      "count": 2,
+      "href": "categories/mcps/"
+    },
+    {
+      "slug": "clis",
+      "title": "CLIs",
+      "description": "Command-line tools that earn a place in a serious builder workflow.",
+      "count": 2,
+      "href": "categories/clis/"
+    },
+    {
+      "slug": "web-apps",
+      "title": "Web Apps",
+      "description": "Focused public-facing applications that sit closer to products than infrastructure.",
+      "count": 3,
+      "href": "categories/web-apps/"
+    },
+    {
+      "slug": "desktop-apps",
+      "title": "Desktop Apps",
+      "description": "Private or local-first desktop surfaces that are notable enough to track publicly.",
+      "count": 1,
+      "href": "categories/desktop-apps/"
+    }
+  ]
+}

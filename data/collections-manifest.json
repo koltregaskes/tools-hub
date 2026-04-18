@@ -1,0 +1,147 @@
+{
+  "title": "StackScout // Collections",
+  "generatedAt": "2026-04-18",
+  "updatedAt": "2026-04-18",
+  "collections": [
+    {
+      "slug": "creator-stack",
+      "title": "Best tools for creators",
+      "summary": "A practical mix for publishing, generation, research, and creative flow.",
+      "description": "If you are building content systems, prototyping creative workflows, or stitching research into production, this is the first StackScout lane to start with.",
+      "items": [
+        {
+          "slug": "hugging-face",
+          "name": "Hugging Face",
+          "href": "tools/hugging-face/"
+        },
+        {
+          "slug": "perplexity",
+          "name": "Perplexity",
+          "href": "tools/perplexity/"
+        },
+        {
+          "slug": "make",
+          "name": "Make",
+          "href": "tools/make/"
+        },
+        {
+          "slug": "openai-api",
+          "name": "OpenAI API",
+          "href": "tools/openai-api/"
+        },
+        {
+          "slug": "strudel-studio",
+          "name": "Strudel Studio",
+          "href": "tools/strudel-studio/"
+        },
+        {
+          "slug": "canvas-planner",
+          "name": "Canvas Planner",
+          "href": "tools/canvas-planner/"
+        }
+      ]
+    },
+    {
+      "slug": "mcp-starters",
+      "title": "Best MCPs to try",
+      "summary": "The MCP servers that are easiest to justify in a real builder workflow right now.",
+      "description": "A good starter set should teach you what MCP is actually useful for: repo intelligence, browser automation, and system-specific reach.",
+      "items": [
+        {
+          "slug": "github-mcp-server",
+          "name": "GitHub MCP Server",
+          "href": "tools/github-mcp-server/"
+        },
+        {
+          "slug": "playwright-mcp",
+          "name": "Playwright MCP",
+          "href": "tools/playwright-mcp/"
+        }
+      ]
+    },
+    {
+      "slug": "automation-apis",
+      "title": "Best APIs for automation",
+      "summary": "The model and platform APIs that matter when your workflows need structured output, tool use, and long-horizon reasoning.",
+      "description": "This collection is biased toward agents, orchestration, and production work rather than generic chatbot embedding.",
+      "items": [
+        {
+          "slug": "openai-api",
+          "name": "OpenAI API",
+          "href": "tools/openai-api/"
+        },
+        {
+          "slug": "anthropic-api",
+          "name": "Anthropic API",
+          "href": "tools/anthropic-api/"
+        },
+        {
+          "slug": "make",
+          "name": "Make",
+          "href": "tools/make/"
+        },
+        {
+          "slug": "n8n",
+          "name": "n8n",
+          "href": "tools/n8n/"
+        }
+      ]
+    },
+    {
+      "slug": "offline-friendly",
+      "title": "Best offline-friendly tools",
+      "summary": "Local or local-first tools that stay useful even when the browser tabs are closed.",
+      "description": "The best offline-friendly tools keep control close to the operator while still fitting a modern workflow.",
+      "items": [
+        {
+          "slug": "gh-cli",
+          "name": "GitHub CLI",
+          "href": "tools/gh-cli/"
+        },
+        {
+          "slug": "wrangler",
+          "name": "Wrangler",
+          "href": "tools/wrangler/"
+        },
+        {
+          "slug": "canvas-planner",
+          "name": "Canvas Planner",
+          "href": "tools/canvas-planner/"
+        },
+        {
+          "slug": "syncpad",
+          "name": "SyncPad",
+          "href": "tools/syncpad/"
+        }
+      ]
+    },
+    {
+      "slug": "stackscout-lab",
+      "title": "From the StackScout Lab",
+      "summary": "A clearly labelled subset of the tools we are building ourselves.",
+      "description": "These are not presented as the whole point of the site. They sit alongside the wider ecosystem and earn their place separately.",
+      "items": [
+        {
+          "slug": "canvas-planner",
+          "name": "Canvas Planner",
+          "href": "tools/canvas-planner/"
+        },
+        {
+          "slug": "signal-stack",
+          "name": "Signal Stack",
+          "href": "tools/signal-stack/"
+        },
+        {
+          "slug": "strudel-studio",
+          "name": "Strudel Studio",
+          "href": "tools/strudel-studio/"
+        },
+        {
+          "slug": "syncpad",
+          "name": "SyncPad",
+          "href": "tools/syncpad/"
+        }
+      ]
+    }
+  ]
+}

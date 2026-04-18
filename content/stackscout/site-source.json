@@ -1,0 +1,237 @@
+{
+  "brand": {
+    "name": "StackScout",
+    "tagline": "The public scout deck for serious builder tools.",
+    "description": "StackScout tracks the tools, services, APIs, MCPs, CLIs, and workbench apps worth a builder's attention.",
+    "heroEyebrow": "Curated ecosystem // tools, systems, and builder intelligence",
+    "heroTitle": "A cleaner way to track the tools actually shaping modern workflows.",
+    "heroLede": "StackScout is the public-facing scout deck for fast-moving builder infrastructure: websites, web services, APIs, MCPs, CLIs, and a smaller lab lane for the tools we are building ourselves. It is curated, selective, and designed to stay useful rather than exhaustive."
+  },
+  "home": {
+    "featureSlugs": [
+      "hugging-face",
+      "openai-api",
+      "n8n",
+      "github-mcp-server"
+    ],
+    "heroFacts": [
+      "Curated ecosystem first, not an everything directory",
+      "Badges and freshness over fake precision scoring",
+      "Official links, update trails, and use-case context in one place"
+    ],
+    "featuredCollections": [
+      "creator-stack",
+      "mcp-starters",
+      "automation-apis",
+      "stackscout-lab"
+    ]
+  },
+  "categories": [
+    {
+      "slug": "websites",
+      "title": "Websites",
+      "description": "Browser-first products and hubs that are useful on their own, not just as a wrapper around an API."
+    },
+    {
+      "slug": "web-services",
+      "title": "Web Services",
+      "description": "Hosted workflow and automation platforms that carry real operational value without requiring a local runtime first."
+    },
+    {
+      "slug": "apis",
+      "title": "APIs",
+      "description": "Platform surfaces for shipping structured AI, automation, and developer workflows."
+    },
+    {
+      "slug": "mcps",
+      "title": "MCPs",
+      "description": "Model Context Protocol servers and bridges that turn static assistants into tool-using systems."
+    },
+    {
+      "slug": "clis",
+      "title": "CLIs",
+      "description": "Command-line tools that earn a place in a serious builder workflow."
+    },
+    {
+      "slug": "web-apps",
+      "title": "Web Apps",
+      "description": "Focused public-facing applications that sit closer to products than infrastructure."
+    },
+    {
+      "slug": "desktop-apps",
+      "title": "Desktop Apps",
+      "description": "Private or local-first desktop surfaces that are notable enough to track publicly."
+    }
+  ],
+  "badges": [
+    {
+      "slug": "recommended",
+      "label": "Recommended",
+      "description": "Worth active attention now. Strong fit, solid signal, and easy to justify to other builders."
+    },
+    {
+      "slug": "specialist-pick",
+      "label": "Specialist Pick",
+      "description": "Excellent in a narrower lane, even if it is not the first tool every builder should start with."
+    },
+    {
+      "slug": "worth-watching",
+      "label": "Worth Watching",
+      "description": "Not a full recommendation yet, but moving in an interesting enough direction to track."
+    },
+    {
+      "slug": "early-but-promising",
+      "label": "Early but Promising",
+      "description": "Still forming. Included because the shape is compelling, not because it is already complete."
+    }
+  ],
+  "maturity": [
+    {
+      "slug": "stable",
+      "label": "Stable",
+      "description": "Operationally dependable enough to recommend without caveat-heavy framing."
+    },
+    {
+      "slug": "fast-moving",
+      "label": "Fast-moving",
+      "description": "Shipping quickly, improving visibly, and still changing shape month to month."
+    },
+    {
+      "slug": "experimental",
+      "label": "Experimental",
+      "description": "Interesting, usable in parts, but still clearly in discovery."
+    },
+    {
+      "slug": "legacy",
+      "label": "Legacy",
+      "description": "Still worth knowing about, but no longer where the momentum is."
+    }
+  ],
+  "methodology": {
+    "thesis": "StackScout is a public guide, not a benchmark lab. We badge selectively, update from official sources where possible, and avoid pretending every fast-moving tool deserves a fixed numeric score.",
+    "principles": [
+      {
+        "title": "Curated over exhaustive",
+        "body": "We start with a smaller cohort of tools that matter, then widen coverage once the update pipeline is trustworthy."
+      },
+      {
+        "title": "Official sources first",
+        "body": "Release notes, changelogs, product blogs, docs, and official repos outrank secondary coverage."
+      },
+      {
+        "title": "Badges over fake precision",
+        "body": "Public verdicts use editorial badges and short written theses instead of fragile decimal scoring."
+      },
+      {
+        "title": "Freshness must be visible",
+        "body": "Every record carries dates. If something has not been updated recently, the site should say that plainly."
+      }
+    ],
+    "freshnessPolicy": [
+      "Tool records carry the date of the latest tracked change that informed the public entry.",
+      "Update feed entries carry the source date and source link.",
+      "A stale entry is better than a fake live one; honesty beats noise."
+    ],
+    "reviewLimits": [
+      "No fake benchmark theater.",
+      "No private operational details in the public layer.",
+      "No claims of integration depth we have not verified or sourced."
+    ]
+  },
+  "radar": [
+    {
+      "title": "Azure MCP Server",
+      "summary": "Microsoft's Azure MCP surface is still in public preview, but the official server is broad enough to matter for enterprise agent workflows.",
+      "status": "Worth Watching",
+      "officialUrl": "https://github.com/Azure/azure-mcp",
+      "sourceUrl": "https://github.com/Azure/azure-mcp/releases",
+      "reason": "Broad Azure coverage, official backing, and a credible enterprise story."
+    },
+    {
+      "title": "Hugging Face MCP Server",
+      "summary": "Hugging Face now has an official MCP story for the Hub, which could become one of the easier ways to bring model, dataset, and Space context into agentic workflows.",
+      "status": "Worth Watching",
+      "officialUrl": "https://huggingface.co/docs/hub/hf-mcp-server",
+      "sourceUrl": "https://huggingface.co/changelog/hf-mcp-server",
+      "reason": "Strong overlap with model discovery, repo knowledge, and public AI artifacts."
+    },
+    {
+      "title": "Make MCP Toolboxes",
+      "summary": "Make is pushing MCP deeper into its automation story via dedicated toolboxes that expose curated scenario sets to assistants.",
+      "status": "Worth Watching",
+      "officialUrl": "https://help.make.com/2026",
+      "sourceUrl": "https://help.make.com/2026",
+      "reason": "Interesting bridge between low-code automation and agent-native tool surfaces."
+    },
+    {
+      "title": "GitHub skills ecosystem",
+      "summary": "GitHub CLI's new skills commandset hints at a broader portable-agent workflow ecosystem worth tracking alongside MCP.",
+      "status": "Worth Watching",
+      "officialUrl": "https://github.com/cli/cli/releases",
+      "sourceUrl": "https://github.com/cli/cli/releases",
+      "reason": "Portable instructions and agent tooling are becoming a real product layer."
+    }
+  ],
+  "collections": [
+    {
+      "slug": "creator-stack",
+      "title": "Best tools for creators",
+      "summary": "A practical mix for publishing, generation, research, and creative flow.",
+      "description": "If you are building content systems, prototyping creative workflows, or stitching research into production, this is the first StackScout lane to start with.",
+      "items": [
+        "hugging-face",
+        "perplexity",
+        "make",
+        "openai-api",
+        "strudel-studio",
+        "canvas-planner"
+      ]
+    },
+    {
+      "slug": "mcp-starters",
+      "title": "Best MCPs to try",
+      "summary": "The MCP servers that are easiest to justify in a real builder workflow right now.",
+      "description": "A good starter set should teach you what MCP is actually useful for: repo intelligence, browser automation, and system-specific reach.",
+      "items": [
+        "github-mcp-server",
+        "playwright-mcp"
+      ]
+    },
+    {
+      "slug": "automation-apis",
+      "title": "Best APIs for automation",
+      "summary": "The model and platform APIs that matter when your workflows need structured output, tool use, and long-horizon reasoning.",
+      "description": "This collection is biased toward agents, orchestration, and production work rather than generic chatbot embedding.",
+      "items": [
+        "openai-api",
+        "anthropic-api",
+        "make",
+        "n8n"
+      ]
+    },
+    {
+      "slug": "offline-friendly",
+      "title": "Best offline-friendly tools",
+      "summary": "Local or local-first tools that stay useful even when the browser tabs are closed.",
+      "description": "The best offline-friendly tools keep control close to the operator while still fitting a modern workflow.",
+      "items": [
+        "gh-cli",
+        "wrangler",
+        "canvas-planner",
+        "syncpad"
+      ]
+    },
+    {
+      "slug": "stackscout-lab",
+      "title": "From the StackScout Lab",
+      "summary": "A clearly labelled subset of the tools we are building ourselves.",
+      "description": "These are not presented as the whole point of the site. They sit alongside the wider ecosystem and earn their place separately.",
+      "items": [
+        "canvas-planner",
+        "signal-stack",
+        "strudel-studio",
+        "syncpad"
+      ]
+    }
+  ]
+}

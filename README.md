@@ -1,56 +1,75 @@
-# Tools Hub by Elusion Works
+# StackScout
 
-A public-facing tools page for the Elusion Works tool stack, built in the same broad spirit as the Games Hub.
+`tools-hub` now builds **StackScout**, the public-facing tools destination for curated builder tools, services, APIs, MCPs, and CLIs.
 
-This repo is the GitHub Pages version of the hub, so it stays static and public-safe while the separate local launcher hub remains the machine-side app that actually opens tools on Windows.
+This repo is still the GitHub Pages implementation base, but the visible product is no longer a simple internal “Tools Hub” brochure. The private operational console remains separate in `W:\Repos\_local\surfaces\tools-hub-local`.
 
-## Public vs Private
+## Public vs private
 
 - This repo is public-facing only.
-- Any private launcher or manager console belongs in a separate local-only `local-hub/` workspace.
-- Do not commit machine-local launchers, evidence captures, or planning notes here.
-- Keep this repo safe for GitHub Pages and public browsing.
+- The local launcher, manager inbox, review evidence, session state, and leak-check operations belong in `tools-hub-local`.
+- Public content must stay safe for GitHub Pages and public browsing.
+- Do not rely on `.gitignore` alone to protect private data. Public output is generated from an allowlisted shared source layer.
 
-## Included Tools
+## Shared source layer
 
-- Canvas Planner
-- MJ Calendar
-- Signal Stack
-- Trailer Creator
-- Strudel Studio
-- SyncPad
+StackScout uses a shared source layer inside this repo:
 
-## Structure
+- `content/stackscout/site-source.json`
+- `content/stackscout/tools-source.json`
+- `content/stackscout/updates-source.json`
 
-- `index.html` - full landing page structure
-- `styles.css` - shared visual system and layout
-- `app.js` - reveal-motion script
-- `assets/` - poster art for each featured tool
+These source files drive:
+
+- public manifests in `data/`
+- generated static pages across the public site
+- a private preview export written to `W:\Repos\_local\surfaces\tools-hub-local\data\stackscout-publishing.json`
+
+## Build
+
+```bash
+npm run build:site
+```
+
+This regenerates:
+
+- `index.html`
+- `catalog/`
+- `categories/`
+- `updates/`
+- `radar/`
+- `collections/`
+- `method/`
+- `tools/<slug>/`
+- `data/*.json`
+- `sitemap.xml`
+
+## Checks
+
+```bash
+npm run check
+```
+
+## Site structure
+
+- `Home`
+- `Catalog`
+- `Tool Detail`
+- `Categories`
+- `Updates`
+- `Radar`
+- `Collections`
+- `Method`
 
 ## Notes
 
-- This repo does not run local `.cmd` launchers
-- It is designed for GitHub Pages and public browsing
-- It is now installable as a lightweight PWA for quick access on desktop or Android
-- Private tools can be featured here safely as long as the page only exposes repo, docs, or release links
-- The visual direction intentionally follows the feel of the Games Hub while staying tools-only
-- The hub should feel like a premium launch surface, not a scratchpad
+- StackScout is curated ecosystem first.
+- Our own tools are a clearly labelled `StackScout Lab` subset, not the whole point of the site.
+- Public verdicts use editorial badges, not fake numeric scoring.
+- Update items should prefer official release notes, changelogs, docs, blogs, and first-party repositories.
 
-## Future Releases
+## Local-only and ignored
 
-- Music Video Generator
-- Comic Book Generator
-- Comic Book Video Generator
-- Creative Canvas Editor
-
-## Local-Only Files
-
-- `.autolab/` is used for internal AutoResearch and should remain untracked
-- `.env*` files are local-only
-- `.local/` and `*.local.md` are for planning notes and are ignored
-
-## Contributor Notes
-
-- Treat this as a showcase surface, not an operations dashboard.
-- If a change only helps local management, it belongs in the private hub instead.
-- Keep the public/private boundary obvious in both docs and code.
+- `.autolab/` is internal AutoResearch support and remains untracked.
+- `.env*` files are local-only except `.env.example`.
+- `.local/` and `*.local.md` are working notes and remain ignored.

@@ -1,0 +1,10 @@
+{
+  "name": "stackscout-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static build pipeline for the StackScout public tools destination.",
+  "scripts": {
+    "build:site": "node scripts/build-stackscout.js",
+    "check": "node --check scripts/build-stackscout.js && node --check app.js && node --check pwa.js"
+  }
+}

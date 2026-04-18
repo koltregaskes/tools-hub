@@ -1,0 +1,122 @@
+[
+  {
+    "id": "hugging-face-kernels",
+    "toolSlug": "hugging-face",
+    "kind": "feature",
+    "title": "Hugging Face added Kernels to the Hub",
+    "summary": "The Hub changelog added Kernels as a new way to browse precompiled, hardware-specific kernels and also continues to push agent traces into the product story.",
+    "publishedAt": "2026-04-15",
+    "sourceLabel": "Hugging Face Changelog",
+    "sourceUrl": "https://huggingface.co/changelog"
+  },
+  {
+    "id": "github-mcp-server-1-0",
+    "toolSlug": "github-mcp-server",
+    "kind": "release",
+    "title": "GitHub MCP Server reached 1.0.0",
+    "summary": "The official GitHub MCP server hit 1.0.0 with granular issue field tooling and broader MCP Apps support behind feature flags.",
+    "publishedAt": "2026-04-16",
+    "sourceLabel": "GitHub MCP Server Releases",
+    "sourceUrl": "https://github.com/github/github-mcp-server/releases"
+  },
+  {
+    "id": "gh-cli-skills-preview",
+    "toolSlug": "gh-cli",
+    "kind": "release",
+    "title": "GitHub CLI 2.90.0 introduced `gh skill` in public preview",
+    "summary": "The latest GitHub CLI release adds search, install, preview, update, and publish flows for portable agent skills.",
+    "publishedAt": "2026-04-16",
+    "sourceLabel": "GitHub CLI Releases",
+    "sourceUrl": "https://github.com/cli/cli/releases"
+  },
+  {
+    "id": "make-cli-public",
+    "toolSlug": "make",
+    "kind": "feature",
+    "title": "Make opened its CLI to all users",
+    "summary": "Make's 2026 release notes show the Make CLI becoming available to all users, continuing the platform's expansion beyond the browser UI.",
+    "publishedAt": "2026-04-17",
+    "sourceLabel": "Make 2026 Release Notes",
+    "sourceUrl": "https://help.make.com/2026"
+  },
+  {
+    "id": "playwright-mcp-070",
+    "toolSlug": "playwright-mcp",
+    "kind": "release",
+    "title": "Playwright MCP 0.0.70 landed as the latest maintenance release",
+    "summary": "The current tagged release is a maintenance cut, while the docs continue to push Playwright MCP as a first-class browser layer for agent workflows.",
+    "publishedAt": "2026-04-01",
+    "sourceLabel": "Playwright MCP Releases",
+    "sourceUrl": "https://github.com/microsoft/playwright-mcp/releases"
+  },
+  {
+    "id": "openai-gpt-54",
+    "toolSlug": "openai-api",
+    "kind": "release",
+    "title": "OpenAI launched GPT-5.4",
+    "summary": "GPT-5.4 arrived with native computer use, tool search, and 1M-token context, reinforcing OpenAI's focus on real agent workflows.",
+    "publishedAt": "2026-03-05",
+    "sourceLabel": "OpenAI Release",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-5-4/"
+  },
+  {
+    "id": "perplexity-ai-computer",
+    "toolSlug": "perplexity",
+    "kind": "direction",
+    "title": "Perplexity doubled down on its product thesis in March 2026",
+    "summary": "Perplexity's public blog framed 'The AI is the Computer' and kept tying that story to its API and device ambitions from late February.",
+    "publishedAt": "2026-03-03",
+    "sourceLabel": "Perplexity Hub",
+    "sourceUrl": "https://www.perplexity.ai/hub"
+  },
+  {
+    "id": "n8n-march-release-line",
+    "toolSlug": "n8n",
+    "kind": "release",
+    "title": "n8n kept its March 2026 release line moving",
+    "summary": "The March release notes show continued 1.12x shipping, while docs and blog updates highlight secrets-provider and workflow-hardening work.",
+    "publishedAt": "2026-03-13",
+    "sourceLabel": "n8n Release Notes",
+    "sourceUrl": "https://docs.n8n.io/release-notes/"
+  },
+  {
+    "id": "anthropic-sonnet-46",
+    "toolSlug": "anthropic-api",
+    "kind": "model",
+    "title": "Anthropic's current system-card set centers Claude Sonnet 4.6",
+    "summary": "Anthropic's model materials list Claude Sonnet 4.6 as the current Sonnet generation and explicitly note API access among the active surfaces.",
+    "publishedAt": "2026-02-20",
+    "sourceLabel": "Anthropic System Cards",
+    "sourceUrl": "https://www.anthropic.com/system-cards"
+  },
+  {
+    "id": "wrangler-458",
+    "toolSlug": "wrangler",
+    "kind": "release",
+    "title": "Wrangler 4.58.0 improved command grouping and auth ergonomics",
+    "summary": "Cloudflare's Workers SDK release added grouped help categories, better auth token retrieval, and type generation on dev startup.",
+    "publishedAt": "2026-01-08",
+    "sourceLabel": "Cloudflare Workers SDK Releases",
+    "sourceUrl": "https://github.com/cloudflare/workers-sdk/releases"
+  },
+  {
+    "id": "canvas-planner-review-pass",
+    "toolSlug": "canvas-planner",
+    "kind": "lab",
+    "title": "Canvas Planner stayed clean and review-ready in its latest public pass",
+    "summary": "The latest public-ready manager pass kept the board surface fast and uncluttered while tightening browser behavior.",
+    "publishedAt": "2026-04-11",
+    "sourceLabel": "Canvas Planner Repository",
+    "sourceUrl": "https://github.com/koltregaskes/canvas-planner"
+  },
+  {
+    "id": "strudel-studio-execution-pass",
+    "toolSlug": "strudel-studio",
+    "kind": "lab",
+    "title": "Strudel Studio's latest public pass focused on smoke-run reliability",
+    "summary": "The recent manager-side pass caught and fixed a release-smoke issue while keeping the studio workflow moving forward.",
+    "publishedAt": "2026-04-12",
+    "sourceLabel": "Strudel Studio Repository",
+    "sourceUrl": "https://github.com/koltregaskes/strudel-studio"
+  }
+]

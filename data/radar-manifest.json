@@ -1,0 +1,39 @@
+{
+  "title": "StackScout // Radar",
+  "generatedAt": "2026-04-18",
+  "updatedAt": "2026-04-18",
+  "items": [
+    {
+      "title": "Azure MCP Server",
+      "summary": "Microsoft's Azure MCP surface is still in public preview, but the official server is broad enough to matter for enterprise agent workflows.",
+      "status": "Worth Watching",
+      "officialUrl": "https://github.com/Azure/azure-mcp",
+      "sourceUrl": "https://github.com/Azure/azure-mcp/releases",
+      "reason": "Broad Azure coverage, official backing, and a credible enterprise story."
+    },
+    {
+      "title": "Hugging Face MCP Server",
+      "summary": "Hugging Face now has an official MCP story for the Hub, which could become one of the easier ways to bring model, dataset, and Space context into agentic workflows.",
+      "status": "Worth Watching",
+      "officialUrl": "https://huggingface.co/docs/hub/hf-mcp-server",
+      "sourceUrl": "https://huggingface.co/changelog/hf-mcp-server",
+      "reason": "Strong overlap with model discovery, repo knowledge, and public AI artifacts."
+    },
+    {
+      "title": "Make MCP Toolboxes",
+      "summary": "Make is pushing MCP deeper into its automation story via dedicated toolboxes that expose curated scenario sets to assistants.",
+      "status": "Worth Watching",
+      "officialUrl": "https://help.make.com/2026",
+      "sourceUrl": "https://help.make.com/2026",
+      "reason": "Interesting bridge between low-code automation and agent-native tool surfaces."
+    },
+    {
+      "title": "GitHub skills ecosystem",
+      "summary": "GitHub CLI's new skills commandset hints at a broader portable-agent workflow ecosystem worth tracking alongside MCP.",
+      "status": "Worth Watching",
+      "officialUrl": "https://github.com/cli/cli/releases",
+      "sourceUrl": "https://github.com/cli/cli/releases",
+      "reason": "Portable instructions and agent tooling are becoming a real product layer."
+    }
+  ]
+}

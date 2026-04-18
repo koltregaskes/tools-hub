@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StackScout // Catalog</title>
+    <meta name="description" content="Searchable StackScout catalog of tracked ecosystem tools and lab products." />
+    <meta property="og:title" content="StackScout // Catalog" />
+    <meta property="og:description" content="Searchable StackScout catalog of tracked ecosystem tools and lab products." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0a100c" />
+    <link rel="icon" type="image/svg+xml" href="../icon.svg" />
+    <link rel="apple-touch-icon" href="../icon.svg" />
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body data-page="catalog" data-site-root="../">
+    <div class="atmosphere" aria-hidden="true">
+      <div class="atmosphere__grid"></div>
+      <div class="atmosphere__ring atmosphere__ring--one"></div>
+      <div class="atmosphere__ring atmosphere__ring--two"></div>
+      <div class="atmosphere__flare atmosphere__flare--acid"></div>
+      <div class="atmosphere__flare atmosphere__flare--ice"></div>
+      <div class="atmosphere__flare atmosphere__flare--ember"></div>
+    </div>
+    <header class="site-header">
+      <a class="site-brand" href="../">
+        <span class="site-brand__mark">S</span>
+        <span>StackScout</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary"><a href="../">Home</a><a href="./" aria-current="page">Catalog</a><a href="../categories/">Categories</a><a href="../updates/">Updates</a><a href="../radar/">Radar</a><a href="../collections/">Collections</a><a href="../method/">Method</a></nav>
+    </header>
+    <main class="page-shell">
+      <section class="hero hero--inner">
+        <div class="hero__copy" data-reveal>
+          <p class="eyebrow">Catalog</p>
+          <h1>Search first. Scroll second.</h1>
+          <p class="hero__lede">The catalog is intentionally selective. It should feel closer to a scout desk than an app store.</p>
+        </div>
+      </section>
+
+      <section class="section-block" data-reveal>
+        <div class="catalog-toolbar">
+          <label class="filter-field filter-field--search">
+            <span>Search</span>
+            <input id="catalogSearch" type="search" placeholder="Search names, summaries, tags, publishers, or latest changes" />
+          </label>
+          <label class="filter-field">
+            <span>Scope</span>
+            <select id="scopeFilter">
+              <option value="">All</option>
+              <option value="ecosystem">Ecosystem</option>
+              <option value="lab">StackScout Lab</option>
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Type</span>
+            <select id="typeFilter">
+              <option value="">All</option>
+              <option value="API">API</option><option value="CLI">CLI</option><option value="Desktop App">Desktop App</option><option value="MCP">MCP</option><option value="Web App">Web App</option><option value="Web Service">Web Service</option><option value="Website">Website</option>
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Category</span>
+            <select id="categoryFilter">
+              <option value="">All</option>
+              <option value="websites">Websites</option><option value="web-services">Web Services</option><option value="apis">APIs</option><option value="mcps">MCPs</option><option value="clis">CLIs</option><option value="web-apps">Web Apps</option><option value="desktop-apps">Desktop Apps</option>
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Pricing</span>
+            <select id="pricingFilter">
+              <option value="">All</option>
+              <option value="Free">Free</option><option value="Free / Cloudflare account required">Free / Cloudflare account required</option><option value="Free / GitHub token required">Free / GitHub token required</option><option value="Free / open source">Free / open source</option><option value="Freemium">Freemium</option><option value="Freemium / Usage-based">Freemium / Usage-based</option><option value="Open source / Cloud plans">Open source / Cloud plans</option><option value="Usage-based">Usage-based</option>
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Badge</span>
+            <select id="badgeFilter">
+              <option value="">All</option>
+              <option value="Worth Watching">Worth Watching</option><option value="Recommended">Recommended</option><option value="Specialist Pick">Specialist Pick</option><option value="Early but Promising">Early but Promising</option>
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Sort</span>
+            <select id="sortFilter">
+              <option value="priority">Editorial priority</option>
+              <option value="newest">Newest tracked change</option>
+              <option value="name">Name</option>
+            </select>
+          </label>
+        </div>
+        <div class="catalog-results"><p id="catalogResultCount">14 entries</p></div>
+        <div id="catalogGrid" class="card-grid">
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="Website"
+      data-category="websites"
+      data-pricing="Freemium"
+      data-badge="Worth Watching"
+      data-date="2026-03-03"
+      data-priority="2"
+      data-search="Perplexity Fast web-native AI research with a public-facing product direction that increasingly spills into APIs and device integrations. Perplexity Perplexity&#39;s March 2026 blog leaned into the thesis that AI becomes the computer, following February announcements about Perplexity APIs and Perplexity Computer. research search answers discovery ai">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--amber">Worth Watching</span>
+      </div>
+      <div class="signal-mark signal-mark--websites">
+        <span>PE</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Website / Websites</p>
+        <h3>Perplexity</h3>
+        <p class="summary">Fast web-native AI research with a public-facing product direction that increasingly spills into APIs and device integrations.</p>
+        <p class="card-note">Perplexity&#39;s March 2026 blog leaned into the thesis that AI becomes the computer, following February announcements about Perplexity APIs and Perplexity Computer.</p>
+        <div class="chip-row"><span class="chip chip--ink">fast research</span><span class="chip chip--ink">trend scouting</span><span class="chip chip--ink">tool discovery</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>Perplexity</span>
+        <span>3 Mar 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/perplexity/">Open dossier</a>
+        <a class="button button--ghost" href="https://www.perplexity.ai/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="Website"
+      data-category="websites"
+      data-pricing="Freemium / Usage-based"
+      data-badge="Recommended"
+      data-date="2026-04-15"
+      data-priority="4"
+      data-search="Hugging Face The strongest public hub for models, datasets, Spaces, open-source research, and fast-moving AI tooling infrastructure. Hugging Face The April 2026 Hub changelog added Kernels and expanded agent traces, which keeps pushing Hugging Face deeper into agent-friendly infrastructure. models datasets spaces open source ai">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--websites">
+        <span>HU</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Website / Websites</p>
+        <h3>Hugging Face</h3>
+        <p class="summary">The strongest public hub for models, datasets, Spaces, open-source research, and fast-moving AI tooling infrastructure.</p>
+        <p class="card-note">The April 2026 Hub changelog added Kernels and expanded agent traces, which keeps pushing Hugging Face deeper into agent-friendly infrastructure.</p>
+        <div class="chip-row"><span class="chip chip--ink">model discovery</span><span class="chip chip--ink">open-source ai</span><span class="chip chip--ink">spaces and demos</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>Hugging Face</span>
+        <span>15 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/hugging-face/">Open dossier</a>
+        <a class="button button--ghost" href="https://huggingface.co/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="Web Service"
+      data-category="web-services"
+      data-pricing="Open source / Cloud plans"
+      data-badge="Specialist Pick"
+      data-date="2026-03-13"
+      data-priority="3"
+      data-search="n8n Workflow automation with a strong self-hosted story, useful AI integrations, and enough openness to stay flexible under real operator control. n8n The March 2026 release line kept moving quickly, while docs and blog coverage emphasized external secrets support and steady 1.12x releases. automation workflows self-hosted agents integrations">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--blue">Specialist Pick</span>
+      </div>
+      <div class="signal-mark signal-mark--web-services">
+        <span>N8</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web Service / Web Services</p>
+        <h3>n8n</h3>
+        <p class="summary">Workflow automation with a strong self-hosted story, useful AI integrations, and enough openness to stay flexible under real operator control.</p>
+        <p class="card-note">The March 2026 release line kept moving quickly, while docs and blog coverage emphasized external secrets support and steady 1.12x releases.</p>
+        <div class="chip-row"><span class="chip chip--ink">self-hosted automation</span><span class="chip chip--ink">workflow control</span><span class="chip chip--ink">agent pipelines</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>n8n</span>
+        <span>13 Mar 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/n8n/">Open dossier</a>
+        <a class="button button--ghost" href="https://n8n.io/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="Web Service"
+      data-category="web-services"
+      data-pricing="Freemium / Usage-based"
+      data-badge="Recommended"
+      data-date="2026-04-17"
+      data-priority="4"
+      data-search="Make A polished hosted automation platform that is shipping quickly into agents, credential collection, and MCP-shaped workflows. Make April 2026 opened the Make CLI to all users, while Q1 shipped MCP toolboxes, credential request work, and continued AI-agent product depth. automation hosted agents integrations mcp">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--web-services">
+        <span>MA</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web Service / Web Services</p>
+        <h3>Make</h3>
+        <p class="summary">A polished hosted automation platform that is shipping quickly into agents, credential collection, and MCP-shaped workflows.</p>
+        <p class="card-note">April 2026 opened the Make CLI to all users, while Q1 shipped MCP toolboxes, credential request work, and continued AI-agent product depth.</p>
+        <div class="chip-row"><span class="chip chip--ink">hosted automation</span><span class="chip chip--ink">rapid integrations</span><span class="chip chip--ink">operator-friendly flows</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>Make</span>
+        <span>17 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/make/">Open dossier</a>
+        <a class="button button--ghost" href="https://www.make.com/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="API"
+      data-category="apis"
+      data-pricing="Usage-based"
+      data-badge="Recommended"
+      data-date="2026-03-05"
+      data-priority="4"
+      data-search="OpenAI API A frontier model API stack that increasingly optimizes for real agent workflows, tool use, and professional work products. OpenAI GPT-5.4 launched on March 5, 2026 with native computer use, tool search, and 1M-token context for longer-horizon workflows. api llm agents tool use computer use">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--apis">
+        <span>OP</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">API / APIs</p>
+        <h3>OpenAI API</h3>
+        <p class="summary">A frontier model API stack that increasingly optimizes for real agent workflows, tool use, and professional work products.</p>
+        <p class="card-note">GPT-5.4 launched on March 5, 2026 with native computer use, tool search, and 1M-token context for longer-horizon workflows.</p>
+        <div class="chip-row"><span class="chip chip--ink">agent systems</span><span class="chip chip--ink">tool use</span><span class="chip chip--ink">professional workflows</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>OpenAI</span>
+        <span>5 Mar 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/openai-api/">Open dossier</a>
+        <a class="button button--ghost" href="https://platform.openai.com/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="API"
+      data-category="apis"
+      data-pricing="Usage-based"
+      data-badge="Recommended"
+      data-date="2026-02-20"
+      data-priority="4"
+      data-search="Anthropic API A strong API lane for Claude-based reasoning, long context, and enterprise-facing agent workflows with a rapidly expanding model lineup. Anthropic Anthropic&#39;s February 2026 model materials moved Claude Sonnet 4.6 into the current API story, while the API notes continue to emphasize admin and cost controls. api claude reasoning long context agents">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--apis">
+        <span>AN</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">API / APIs</p>
+        <h3>Anthropic API</h3>
+        <p class="summary">A strong API lane for Claude-based reasoning, long context, and enterprise-facing agent workflows with a rapidly expanding model lineup.</p>
+        <p class="card-note">Anthropic&#39;s February 2026 model materials moved Claude Sonnet 4.6 into the current API story, while the API notes continue to emphasize admin and cost controls.</p>
+        <div class="chip-row"><span class="chip chip--ink">reasoning-heavy agents</span><span class="chip chip--ink">structured analysis</span><span class="chip chip--ink">enterprise api work</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>Anthropic</span>
+        <span>20 Feb 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/anthropic-api/">Open dossier</a>
+        <a class="button button--ghost" href="https://docs.anthropic.com/en/api/overview" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="MCP"
+      data-category="mcps"
+      data-pricing="Free / GitHub token required"
+      data-badge="Recommended"
+      data-date="2026-04-16"
+      data-priority="4"
+      data-search="GitHub MCP Server GitHub&#39;s official MCP server brings repositories, issues, pull requests, actions, and related workflows directly into agent loops. GitHub The official server hit v1.0.0 on April 16, 2026, adding granular issue field tooling and formalizing MCP Apps feature-flag support. mcp github repos issues agent workflows">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--mcps">
+        <span>GI</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">MCP / MCPs</p>
+        <h3>GitHub MCP Server</h3>
+        <p class="summary">GitHub&#39;s official MCP server brings repositories, issues, pull requests, actions, and related workflows directly into agent loops.</p>
+        <p class="card-note">The official server hit v1.0.0 on April 16, 2026, adding granular issue field tooling and formalizing MCP Apps feature-flag support.</p>
+        <div class="chip-row"><span class="chip chip--ink">repo-aware agents</span><span class="chip chip--ink">issue workflows</span><span class="chip chip--ink">developer automation</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>GitHub</span>
+        <span>16 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/github-mcp-server/">Open dossier</a>
+        <a class="button button--ghost" href="https://github.com/github/github-mcp-server" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="MCP"
+      data-category="mcps"
+      data-pricing="Free / open source"
+      data-badge="Specialist Pick"
+      data-date="2026-04-01"
+      data-priority="3"
+      data-search="Playwright MCP Structured browser automation for agents, backed by Playwright&#39;s accessibility-first interaction model and official docs. Microsoft The latest 0.0.70 release landed on April 1, 2026 as a maintenance cut, while the official docs now frame Playwright MCP as the structured browser layer for coding agents. mcp browser automation playwright testing agents">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--blue">Specialist Pick</span>
+      </div>
+      <div class="signal-mark signal-mark--mcps">
+        <span>PL</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">MCP / MCPs</p>
+        <h3>Playwright MCP</h3>
+        <p class="summary">Structured browser automation for agents, backed by Playwright&#39;s accessibility-first interaction model and official docs.</p>
+        <p class="card-note">The latest 0.0.70 release landed on April 1, 2026 as a maintenance cut, while the official docs now frame Playwright MCP as the structured browser layer for coding agents.</p>
+        <div class="chip-row"><span class="chip chip--ink">browser proof</span><span class="chip chip--ink">agent verification</span><span class="chip chip--ink">ui automation</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>Microsoft</span>
+        <span>1 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/playwright-mcp/">Open dossier</a>
+        <a class="button button--ghost" href="https://playwright.dev/docs/getting-started-mcp" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="CLI"
+      data-category="clis"
+      data-pricing="Free / open source"
+      data-badge="Recommended"
+      data-date="2026-04-16"
+      data-priority="4"
+      data-search="GitHub CLI Still one of the best developer CLIs going, and now clearly leaning into agent skills and official extension ergonomics. GitHub GitHub CLI 2.90.0 shipped `gh skill` in public preview on April 16, 2026, alongside better official extension suggestions. cli github developer tools skills automation">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--green">Recommended</span>
+      </div>
+      <div class="signal-mark signal-mark--clis">
+        <span>GI</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">CLI / CLIs</p>
+        <h3>GitHub CLI</h3>
+        <p class="summary">Still one of the best developer CLIs going, and now clearly leaning into agent skills and official extension ergonomics.</p>
+        <p class="card-note">GitHub CLI 2.90.0 shipped `gh skill` in public preview on April 16, 2026, alongside better official extension suggestions.</p>
+        <div class="chip-row"><span class="chip chip--ink">github workflows</span><span class="chip chip--ink">terminal automation</span><span class="chip chip--ink">agent-friendly tooling</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>GitHub</span>
+        <span>16 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/gh-cli/">Open dossier</a>
+        <a class="button button--ghost" href="https://cli.github.com/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="ecosystem"
+      data-type="CLI"
+      data-category="clis"
+      data-pricing="Free / Cloudflare account required"
+      data-badge="Specialist Pick"
+      data-date="2026-01-08"
+      data-priority="3"
+      data-search="Wrangler Cloudflare&#39;s command-line surface for Workers keeps absorbing more platform breadth without losing its day-to-day usefulness. Cloudflare Wrangler 4.58.0 added grouped command categories, better auth token handling, and auto type generation on dev startup in January 2026. cli cloudflare workers deployments edge">
+      <div class="scout-card__topline">
+        <span class="pill pill--ink">Ecosystem</span>
+        <span class="pill pill--blue">Specialist Pick</span>
+      </div>
+      <div class="signal-mark signal-mark--clis">
+        <span>WR</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">CLI / CLIs</p>
+        <h3>Wrangler</h3>
+        <p class="summary">Cloudflare&#39;s command-line surface for Workers keeps absorbing more platform breadth without losing its day-to-day usefulness.</p>
+        <p class="card-note">Wrangler 4.58.0 added grouped command categories, better auth token handling, and auto type generation on dev startup in January 2026.</p>
+        <div class="chip-row"><span class="chip chip--ink">workers deploys</span><span class="chip chip--ink">cloudflare development</span><span class="chip chip--ink">edge tooling</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>Cloudflare</span>
+        <span>8 Jan 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/wrangler/">Open dossier</a>
+        <a class="button button--ghost" href="https://developers.cloudflare.com/workers/wrangler/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="lab"
+      data-type="Web App"
+      data-category="web-apps"
+      data-pricing="Free"
+      data-badge="Early but Promising"
+      data-date="2026-04-11"
+      data-priority="1"
+      data-search="Canvas Planner A visual planning surface for boards, campaign flow, and creative work without the drag of a generic project manager. StackScout Lab The latest public-ready pass cleaned the browser surface and kept the board flow sharp without adding clutter. planning boards creative workflow pwa">
+      <div class="scout-card__topline">
+        <span class="pill pill--violet">StackScout Lab</span>
+        <span class="pill pill--violet">Early but Promising</span>
+      </div>
+      <div class="signal-mark signal-mark--web-apps">
+        <span>CA</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web App / Web Apps</p>
+        <h3>Canvas Planner</h3>
+        <p class="summary">A visual planning surface for boards, campaign flow, and creative work without the drag of a generic project manager.</p>
+        <p class="card-note">The latest public-ready pass cleaned the browser surface and kept the board flow sharp without adding clutter.</p>
+        <div class="chip-row"><span class="chip chip--ink">campaign planning</span><span class="chip chip--ink">creative sequencing</span><span class="chip chip--ink">lightweight boards</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>StackScout Lab</span>
+        <span>11 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/canvas-planner/">Open dossier</a>
+        <a class="button button--ghost" href="https://koltregaskes.github.io/canvas-planner/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="lab"
+      data-type="Web App"
+      data-category="web-apps"
+      data-pricing="Free"
+      data-badge="Early but Promising"
+      data-date="2026-04-12"
+      data-priority="1"
+      data-search="Signal Stack A publishing planner built around image, video, and queue workflows rather than generic social-media posting dashboards. StackScout Lab The recent execution pass made delivery truth more explicit, but live platform integrations still depend on real credentials and approvals. publishing scheduling creator workflow social">
+      <div class="scout-card__topline">
+        <span class="pill pill--violet">StackScout Lab</span>
+        <span class="pill pill--violet">Early but Promising</span>
+      </div>
+      <div class="signal-mark signal-mark--web-apps">
+        <span>SI</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web App / Web Apps</p>
+        <h3>Signal Stack</h3>
+        <p class="summary">A publishing planner built around image, video, and queue workflows rather than generic social-media posting dashboards.</p>
+        <p class="card-note">The recent execution pass made delivery truth more explicit, but live platform integrations still depend on real credentials and approvals.</p>
+        <div class="chip-row"><span class="chip chip--ink">creator scheduling</span><span class="chip chip--ink">queue design</span><span class="chip chip--ink">platform planning</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>StackScout Lab</span>
+        <span>12 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/signal-stack/">Open dossier</a>
+        <a class="button button--ghost" href="https://koltregaskes.github.io/signal-stack/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="lab"
+      data-type="Web App"
+      data-category="web-apps"
+      data-pricing="Free"
+      data-badge="Worth Watching"
+      data-date="2026-04-12"
+      data-priority="2"
+      data-search="Strudel Studio A browser-based music studio path that brings programmable patterns, scenes, and samples into a clearer public-facing workflow. StackScout Lab The takeover pass tightened the smoke runner and kept the product moving toward a more serious music workspace. music browser studio coding audio">
+      <div class="scout-card__topline">
+        <span class="pill pill--violet">StackScout Lab</span>
+        <span class="pill pill--amber">Worth Watching</span>
+      </div>
+      <div class="signal-mark signal-mark--web-apps">
+        <span>ST</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Web App / Web Apps</p>
+        <h3>Strudel Studio</h3>
+        <p class="summary">A browser-based music studio path that brings programmable patterns, scenes, and samples into a clearer public-facing workflow.</p>
+        <p class="card-note">The takeover pass tightened the smoke runner and kept the product moving toward a more serious music workspace.</p>
+        <div class="chip-row"><span class="chip chip--ink">browser music prototyping</span><span class="chip chip--ink">pattern-driven composition</span><span class="chip chip--ink">creative experiments</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>StackScout Lab</span>
+        <span>12 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/strudel-studio/">Open dossier</a>
+        <a class="button button--ghost" href="https://koltregaskes.github.io/strudel-studio/" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  
+    <article class="scout-card scout-card--tool" data-card
+      data-scope="lab"
+      data-type="Desktop App"
+      data-category="desktop-apps"
+      data-pricing="Free"
+      data-badge="Early but Promising"
+      data-date="2026-04-12"
+      data-priority="1"
+      data-search="SyncPad A private, desktop-first notes tool with live sync ambitions and a workflow that stays close to the operator. StackScout Lab The browser and client surfaces are healthier, but the Electron desktop verification path is still blocked by a GPU startup issue on the manager machine. notes desktop private sync knowledge">
+      <div class="scout-card__topline">
+        <span class="pill pill--violet">StackScout Lab</span>
+        <span class="pill pill--violet">Early but Promising</span>
+      </div>
+      <div class="signal-mark signal-mark--desktop-apps">
+        <span>SY</span>
+      </div>
+      <div class="scout-card__body">
+        <p class="label">Desktop App / Desktop Apps</p>
+        <h3>SyncPad</h3>
+        <p class="summary">A private, desktop-first notes tool with live sync ambitions and a workflow that stays close to the operator.</p>
+        <p class="card-note">The browser and client surfaces are healthier, but the Electron desktop verification path is still blocked by a GPU startup issue on the manager machine.</p>
+        <div class="chip-row"><span class="chip chip--ink">private notes</span><span class="chip chip--ink">local-first drafting</span><span class="chip chip--ink">multi-device ambition</span></div>
+      </div>
+      <div class="scout-card__meta">
+        <span>StackScout Lab</span>
+        <span>12 Apr 2026</span>
+      </div>
+      <div class="scout-card__actions">
+        <a class="button button--primary" href="../tools/syncpad/">Open dossier</a>
+        <a class="button button--ghost" href="https://github.com/koltregaskes/syncpad" target="_blank" rel="noreferrer">Official</a>
+      </div>
+    </article>
+  </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div>
+        <p class="site-footer__brand">StackScout</p>
+        <p>Public tool intelligence for builders, operators, and curious system nerds.</p>
+      </div>
+      <div class="site-footer__meta">
+        <p>Updated 18 Apr 2026</p>
+        <p>Public site generation from the StackScout shared source layer.</p>
+      </div>
+    </footer>
+    <script src="../pwa.js"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

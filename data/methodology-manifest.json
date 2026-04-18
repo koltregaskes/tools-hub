@@ -1,0 +1,78 @@
+{
+  "title": "StackScout // Methodology",
+  "generatedAt": "2026-04-18",
+  "updatedAt": "2026-04-18",
+  "thesis": "StackScout is a public guide, not a benchmark lab. We badge selectively, update from official sources where possible, and avoid pretending every fast-moving tool deserves a fixed numeric score.",
+  "principles": [
+    {
+      "title": "Curated over exhaustive",
+      "body": "We start with a smaller cohort of tools that matter, then widen coverage once the update pipeline is trustworthy."
+    },
+    {
+      "title": "Official sources first",
+      "body": "Release notes, changelogs, product blogs, docs, and official repos outrank secondary coverage."
+    },
+    {
+      "title": "Badges over fake precision",
+      "body": "Public verdicts use editorial badges and short written theses instead of fragile decimal scoring."
+    },
+    {
+      "title": "Freshness must be visible",
+      "body": "Every record carries dates. If something has not been updated recently, the site should say that plainly."
+    }
+  ],
+  "badges": [
+    {
+      "slug": "recommended",
+      "label": "Recommended",
+      "description": "Worth active attention now. Strong fit, solid signal, and easy to justify to other builders."
+    },
+    {
+      "slug": "specialist-pick",
+      "label": "Specialist Pick",
+      "description": "Excellent in a narrower lane, even if it is not the first tool every builder should start with."
+    },
+    {
+      "slug": "worth-watching",
+      "label": "Worth Watching",
+      "description": "Not a full recommendation yet, but moving in an interesting enough direction to track."
+    },
+    {
+      "slug": "early-but-promising",
+      "label": "Early but Promising",
+      "description": "Still forming. Included because the shape is compelling, not because it is already complete."
+    }
+  ],
+  "maturity": [
+    {
+      "slug": "stable",
+      "label": "Stable",
+      "description": "Operationally dependable enough to recommend without caveat-heavy framing."
+    },
+    {
+      "slug": "fast-moving",
+      "label": "Fast-moving",
+      "description": "Shipping quickly, improving visibly, and still changing shape month to month."
+    },
+    {
+      "slug": "experimental",
+      "label": "Experimental",
+      "description": "Interesting, usable in parts, but still clearly in discovery."
+    },
+    {
+      "slug": "legacy",
+      "label": "Legacy",
+      "description": "Still worth knowing about, but no longer where the momentum is."
+    }
+  ],
+  "freshnessPolicy": [
+    "Tool records carry the date of the latest tracked change that informed the public entry.",
+    "Update feed entries carry the source date and source link.",
+    "A stale entry is better than a fake live one; honesty beats noise."
+  ],
+  "reviewLimits": [
+    "No fake benchmark theater.",
+    "No private operational details in the public layer.",
+    "No claims of integration depth we have not verified or sourced."
+  ]
+}
