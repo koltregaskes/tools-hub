@@ -1,8 +1,8 @@
 # StackScout
 
-`tools-hub` now builds **StackScout**, the public-facing tools destination for curated builder tools, services, APIs, MCPs, and CLIs.
+`tools-hub` builds **StackScout**, the public-facing tools destination for curated builder tools, services, APIs, MCPs, and CLIs.
 
-This repo is still the GitHub Pages implementation base, but the visible product is no longer a simple internal “Tools Hub” brochure. The private operational console remains separate in `W:\Repos\_local\surfaces\tools-hub-local`.
+This repo remains the GitHub Pages implementation base, but the visible product is no longer a simple internal "Tools Hub" brochure. The private operational console stays separate in `W:\Repos\_local\surfaces\tools-hub-local`.
 
 ## Public vs private
 
@@ -49,6 +49,16 @@ This regenerates:
 ```bash
 npm run check
 ```
+
+## Refresh
+
+```bash
+npm run refresh:site
+```
+
+This runs the site build, runs checks, and writes private refresh status to `W:\Repos\_local\surfaces\tools-hub-local\data\stackscout-refresh-status.json`.
+
+For unattended Windows refreshes without visible terminal focus theft, use the local-only launcher at `W:\Repos\_My Tools\LOCAL-ONLY\stackscout-refresh\run-stackscout-refresh.cmd`.
 
 ## Site structure
 

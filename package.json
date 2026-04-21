@@ -5,6 +5,7 @@
   "description": "Static build pipeline for the StackScout public tools destination.",
   "scripts": {
     "build:site": "node scripts/build-stackscout.js",
+    "refresh:site": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/refresh-stackscout.ps1",
     "check": "node --check scripts/build-stackscout.js && node --check app.js && node --check pwa.js"
   }
 }
