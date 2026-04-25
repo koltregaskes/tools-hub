@@ -14,7 +14,7 @@
     <link rel="manifest" href="../manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,500..800,50&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body data-page="catalog" data-site-root="../">
@@ -26,10 +26,20 @@
       <div class="atmosphere__flare atmosphere__flare--ice"></div>
       <div class="atmosphere__flare atmosphere__flare--ember"></div>
     </div>
+    <div class="site-meta-bar">
+      <div class="site-meta-bar__inner">
+        <p class="site-meta-bar__issue">Issue 2026-04-25 // Curated public signal for builders</p>
+        <div class="site-meta-bar__tokens">
+          <span>No fake telemetry</span>
+          <span>Official sources first</span>
+          <span>Badges over fake scores</span>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <a class="site-brand" href="../">
         <span class="site-brand__mark">S</span>
-        <span>StackScout</span>
+        <span class="site-brand__wordmark">StackScout</span>
       </a>
       <nav class="site-nav" aria-label="Primary"><a href="../">Home</a><a href="./" aria-current="page">Catalog</a><a href="../categories/">Categories</a><a href="../updates/">Updates</a><a href="../radar/">Radar</a><a href="../collections/">Collections</a><a href="../method/">Method</a></nav>
     </header>
@@ -39,62 +49,108 @@
           <p class="eyebrow">Catalog</p>
           <h1>Search first. Scroll second.</h1>
           <p class="hero__lede">The catalog is intentionally selective. It should feel closer to a scout desk than an app store.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="../updates/">Open updates</a>
+            <a class="button button--ghost" href="../method/">Read method</a>
+          </div>
+        </div>
+        <div class="hero__rail" data-reveal>
+          <article class="hero-panel hero-panel--lead">
+            <p class="label">Newest tracked change</p>
+            <h2>Make</h2>
+            <p class="summary">April 2026 opened the Make CLI to all users, while Q1 shipped MCP toolboxes, credential request work, and continued AI-agent product depth.</p>
+            <div class="hero-panel__meta">
+              <span>Recommended</span>
+              <span>17 Apr 2026</span>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="section-block" data-reveal>
-        <div class="catalog-toolbar">
-          <label class="filter-field filter-field--search">
-            <span>Search</span>
-            <input id="catalogSearch" type="search" placeholder="Search names, summaries, tags, publishers, or latest changes" />
-          </label>
-          <label class="filter-field">
-            <span>Scope</span>
-            <select id="scopeFilter">
-              <option value="">All</option>
-              <option value="ecosystem">Ecosystem</option>
-              <option value="lab">StackScout Lab</option>
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Type</span>
-            <select id="typeFilter">
-              <option value="">All</option>
-              <option value="API">API</option><option value="CLI">CLI</option><option value="Desktop App">Desktop App</option><option value="MCP">MCP</option><option value="Web App">Web App</option><option value="Web Service">Web Service</option><option value="Website">Website</option>
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Category</span>
-            <select id="categoryFilter">
-              <option value="">All</option>
-              <option value="websites">Websites</option><option value="web-services">Web Services</option><option value="apis">APIs</option><option value="mcps">MCPs</option><option value="clis">CLIs</option><option value="web-apps">Web Apps</option><option value="desktop-apps">Desktop Apps</option>
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Pricing</span>
-            <select id="pricingFilter">
-              <option value="">All</option>
-              <option value="Free">Free</option><option value="Free / Cloudflare account required">Free / Cloudflare account required</option><option value="Free / GitHub token required">Free / GitHub token required</option><option value="Free / open source">Free / open source</option><option value="Freemium">Freemium</option><option value="Freemium / Usage-based">Freemium / Usage-based</option><option value="Open source / Cloud plans">Open source / Cloud plans</option><option value="Usage-based">Usage-based</option>
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Badge</span>
-            <select id="badgeFilter">
-              <option value="">All</option>
-              <option value="Worth Watching">Worth Watching</option><option value="Recommended">Recommended</option><option value="Specialist Pick">Specialist Pick</option><option value="Early but Promising">Early but Promising</option>
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Sort</span>
-            <select id="sortFilter">
-              <option value="priority">Editorial priority</option>
-              <option value="newest">Newest tracked change</option>
-              <option value="name">Name</option>
-            </select>
-          </label>
-        </div>
-        <div class="catalog-results"><p id="catalogResultCount">14 entries</p></div>
-        <div id="catalogGrid" class="card-grid">
+        <div class="catalog-layout">
+          <aside class="catalog-sidebar">
+            <div class="catalog-panel">
+              <p class="label">Find your lane</p>
+              <div class="catalog-toolbar">
+                <label class="filter-field filter-field--search">
+                  <span>Search</span>
+                  <input id="catalogSearch" type="search" placeholder="Search names, summaries, tags, publishers, or latest changes" />
+                </label>
+                <label class="filter-field">
+                  <span>Scope</span>
+                  <select id="scopeFilter">
+                    <option value="">All</option>
+                    <option value="ecosystem">Ecosystem</option>
+                    <option value="lab">StackScout Lab</option>
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Type</span>
+                  <select id="typeFilter">
+                    <option value="">All</option>
+                    <option value="API">API</option><option value="CLI">CLI</option><option value="Desktop App">Desktop App</option><option value="MCP">MCP</option><option value="Web App">Web App</option><option value="Web Service">Web Service</option><option value="Website">Website</option>
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Category</span>
+                  <select id="categoryFilter">
+                    <option value="">All</option>
+                    <option value="websites">Websites</option><option value="web-services">Web Services</option><option value="apis">APIs</option><option value="mcps">MCPs</option><option value="clis">CLIs</option><option value="web-apps">Web Apps</option><option value="desktop-apps">Desktop Apps</option>
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Pricing</span>
+                  <select id="pricingFilter">
+                    <option value="">All</option>
+                    <option value="Free">Free</option><option value="Free / Cloudflare account required">Free / Cloudflare account required</option><option value="Free / GitHub token required">Free / GitHub token required</option><option value="Free / open source">Free / open source</option><option value="Freemium">Freemium</option><option value="Freemium / Usage-based">Freemium / Usage-based</option><option value="Open source / Cloud plans">Open source / Cloud plans</option><option value="Usage-based">Usage-based</option>
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Badge</span>
+                  <select id="badgeFilter">
+                    <option value="">All</option>
+                    <option value="Worth Watching">Worth Watching</option><option value="Recommended">Recommended</option><option value="Specialist Pick">Specialist Pick</option><option value="Early but Promising">Early but Promising</option>
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Sort</span>
+                  <select id="sortFilter">
+                    <option value="priority">Editorial priority</option>
+                    <option value="newest">Newest tracked change</option>
+                    <option value="name">Name</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="catalog-panel">
+              <p class="label">Preset views</p>
+              <div class="brief-list">
+                <a class="brief-link" href="./?scope=ecosystem&badge=Recommended">
+                  <span>Recommended ecosystem tools</span>
+                  <strong>Fastest route to the strongest picks</strong>
+                </a>
+                <a class="brief-link" href="./?category=mcps">
+                  <span>MCPs worth trying</span>
+                  <strong>Agent-ready protocol surfaces</strong>
+                </a>
+                <a class="brief-link" href="./?scope=lab">
+                  <span>StackScout Lab</span>
+                  <strong>Clearly labelled in-house tools</strong>
+                </a>
+                <a class="brief-link" href="./?pricing=Usage-based">
+                  <span>Usage-based APIs</span>
+                  <strong>Paid model and platform surfaces</strong>
+                </a>
+              </div>
+            </div>
+          </aside>
+          <div class="catalog-main">
+            <div class="catalog-results">
+              <p id="catalogResultCount">14 entries</p>
+              <p>URL state updates as filters change, so every filtered view is linkable.</p>
+            </div>
+            <div id="catalogGrid" class="card-grid card-grid--catalog">
     <article class="scout-card scout-card--tool" data-card
       data-scope="ecosystem"
       data-type="Website"
@@ -120,6 +176,7 @@
       </div>
       <div class="scout-card__meta">
         <span>Perplexity</span>
+        <span>Fast-moving</span>
         <span>3 Mar 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -153,6 +210,7 @@
       </div>
       <div class="scout-card__meta">
         <span>Hugging Face</span>
+        <span>Stable</span>
         <span>15 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -186,6 +244,7 @@
       </div>
       <div class="scout-card__meta">
         <span>n8n</span>
+        <span>Stable</span>
         <span>13 Mar 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -219,6 +278,7 @@
       </div>
       <div class="scout-card__meta">
         <span>Make</span>
+        <span>Fast-moving</span>
         <span>17 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -252,6 +312,7 @@
       </div>
       <div class="scout-card__meta">
         <span>OpenAI</span>
+        <span>Fast-moving</span>
         <span>5 Mar 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -285,6 +346,7 @@
       </div>
       <div class="scout-card__meta">
         <span>Anthropic</span>
+        <span>Fast-moving</span>
         <span>20 Feb 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -318,6 +380,7 @@
       </div>
       <div class="scout-card__meta">
         <span>GitHub</span>
+        <span>Stable</span>
         <span>16 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -351,6 +414,7 @@
       </div>
       <div class="scout-card__meta">
         <span>Microsoft</span>
+        <span>Fast-moving</span>
         <span>1 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -384,6 +448,7 @@
       </div>
       <div class="scout-card__meta">
         <span>GitHub</span>
+        <span>Stable</span>
         <span>16 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -417,6 +482,7 @@
       </div>
       <div class="scout-card__meta">
         <span>Cloudflare</span>
+        <span>Stable</span>
         <span>8 Jan 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -450,6 +516,7 @@
       </div>
       <div class="scout-card__meta">
         <span>StackScout Lab</span>
+        <span>Experimental</span>
         <span>11 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -483,6 +550,7 @@
       </div>
       <div class="scout-card__meta">
         <span>StackScout Lab</span>
+        <span>Experimental</span>
         <span>12 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -516,6 +584,7 @@
       </div>
       <div class="scout-card__meta">
         <span>StackScout Lab</span>
+        <span>Experimental</span>
         <span>12 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -549,6 +618,7 @@
       </div>
       <div class="scout-card__meta">
         <span>StackScout Lab</span>
+        <span>Experimental</span>
         <span>12 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -557,6 +627,8 @@
       </div>
     </article>
   </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="site-footer">
@@ -565,7 +637,7 @@
         <p>Public tool intelligence for builders, operators, and curious system nerds.</p>
       </div>
       <div class="site-footer__meta">
-        <p>Updated 21 Apr 2026</p>
+        <p>Updated 25 Apr 2026</p>
         <p>Public site generation from the StackScout shared source layer.</p>
       </div>
     </footer>

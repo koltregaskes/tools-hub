@@ -71,12 +71,22 @@ For unattended Windows refreshes without visible terminal focus theft, use the l
 - `Collections`
 - `Method`
 
+## Launch surface highlights
+
+- editorial signal-desk shell rather than a generic directory layout
+- shareable catalog filters via URL query state
+- public dossier pages for every tracked tool
+- source-linked updates and visible freshness dates
+- clearly labelled `StackScout Lab` subset for in-house tools
+- installable static PWA shell for repeat visits
+
 ## Notes
 
 - StackScout is curated ecosystem first.
 - Our own tools are a clearly labelled `StackScout Lab` subset, not the whole point of the site.
 - Public verdicts use editorial badges, not fake numeric scoring.
 - Update items should prefer official release notes, changelogs, docs, blogs, and first-party repositories.
+- The catalog now keeps filter state in the URL so filtered views can be shared directly.
 
 ## Local-only and ignored
 

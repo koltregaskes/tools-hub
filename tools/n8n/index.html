@@ -14,7 +14,7 @@
     <link rel="manifest" href="../../manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,500..800,50&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../styles.css" />
   </head>
   <body data-page="catalog" data-site-root="../../">
@@ -26,10 +26,20 @@
       <div class="atmosphere__flare atmosphere__flare--ice"></div>
       <div class="atmosphere__flare atmosphere__flare--ember"></div>
     </div>
+    <div class="site-meta-bar">
+      <div class="site-meta-bar__inner">
+        <p class="site-meta-bar__issue">Issue 2026-04-25 // Curated public signal for builders</p>
+        <div class="site-meta-bar__tokens">
+          <span>No fake telemetry</span>
+          <span>Official sources first</span>
+          <span>Badges over fake scores</span>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <a class="site-brand" href="../../">
         <span class="site-brand__mark">S</span>
-        <span>StackScout</span>
+        <span class="site-brand__wordmark">StackScout</span>
       </a>
       <nav class="site-nav" aria-label="Primary"><a href="../../">Home</a><a href="../../catalog/" aria-current="page">Catalog</a><a href="../../categories/">Categories</a><a href="../../updates/">Updates</a><a href="../../radar/">Radar</a><a href="../../collections/">Collections</a><a href="../../method/">Method</a></nav>
     </header>
@@ -49,17 +59,20 @@
             <a class="button button--ghost" href="https://docs.n8n.io/" target="_blank" rel="noreferrer">Docs</a>
             <a class="button button--ghost" href="https://github.com/n8n-io/n8n" target="_blank" rel="noreferrer">Repo</a>
           </div>
+          <div class="chip-row"><span class="chip chip--ink">Best for: self-hosted automation</span><span class="chip chip--ink">Best for: workflow control</span><span class="chip chip--ink">Best for: agent pipelines</span></div>
         </div>
-        <div class="detail-side" data-reveal>
-          <article class="detail-panel">
+        <div class="hero__rail" data-reveal>
+          <article class="hero-panel">
             <span class="label">Publisher</span>
             <strong>n8n</strong>
+            <p class="summary">Web Service / Web Services</p>
           </article>
-          <article class="detail-panel">
+          <article class="hero-panel">
             <span class="label">Pricing</span>
             <strong>Open source / Cloud plans</strong>
+            <p class="summary">3 platform signals</p>
           </article>
-          <article class="detail-panel">
+          <article class="hero-panel">
             <span class="label">Latest tracked change</span>
             <strong>13 Mar 2026</strong>
             <p>The March 2026 release line kept moving quickly, while docs and blog coverage emphasized external secrets support and steady 1.12x releases.</p>
@@ -78,7 +91,6 @@
           <div class="detail-panel detail-panel--prose">
             <p class="lead">Best when you want automation depth without surrendering the whole stack to a hosted black box.</p>
             <p>The March 2026 release line kept moving quickly, while docs and blog coverage emphasized external secrets support and steady 1.12x releases.</p>
-            <div class="chip-row"><span class="chip chip--ink">Best for: self-hosted automation</span><span class="chip chip--ink">Best for: workflow control</span><span class="chip chip--ink">Best for: agent pipelines</span></div>
           </div>
           <div class="detail-panel detail-panel--prose">
             <p class="label">Platforms</p>
@@ -121,7 +133,10 @@
           <p class="label">Web Service / n8n</p>
           <h3>n8n kept its March 2026 release line moving</h3>
         </div>
-        <span class="pill pill--blue">Specialist Pick</span>
+        <div class="chip-row">
+          <span class="pill pill--ink">Release</span>
+          <span class="pill pill--blue">Specialist Pick</span>
+        </div>
       </div>
       <p class="summary">The March release notes show continued 1.12x shipping, while docs and blog updates highlight secrets-provider and workflow-hardening work.</p>
       <div class="activity-card__meta">
@@ -171,6 +186,7 @@
       </div>
       <div class="scout-card__meta">
         <span>Make</span>
+        <span>Fast-moving</span>
         <span>17 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -204,6 +220,7 @@
       </div>
       <div class="scout-card__meta">
         <span>OpenAI</span>
+        <span>Fast-moving</span>
         <span>5 Mar 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -237,6 +254,7 @@
       </div>
       <div class="scout-card__meta">
         <span>Anthropic</span>
+        <span>Fast-moving</span>
         <span>20 Feb 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -254,7 +272,7 @@
         <p>Public tool intelligence for builders, operators, and curious system nerds.</p>
       </div>
       <div class="site-footer__meta">
-        <p>Updated 21 Apr 2026</p>
+        <p>Updated 25 Apr 2026</p>
         <p>Public site generation from the StackScout shared source layer.</p>
       </div>
     </footer>

@@ -153,6 +153,15 @@ function outputHref(fromOutputPath, targetOutputPath) {
   return routeHref(fromOutputPath, targetOutputPath, { trimIndex: true })
 }
 
+function outputQueryHref(fromOutputPath, targetOutputPath, params) {
+  const href = outputHref(fromOutputPath, targetOutputPath)
+  const query = new URLSearchParams(
+    Object.entries(params || {}).filter(([, value]) => value !== undefined && value !== null && value !== ''),
+  ).toString()
+
+  return query ? `${href}?${query}` : href
+}
+
 function outputAssetHref(fromOutputPath, assetPath) {
   return routeHref(fromOutputPath, assetPath, { trimIndex: false })
 }
@@ -398,6 +407,7 @@ function renderToolCard(tool, outputPath, compact = false) {
       </div>
       <div class="scout-card__meta">
         <span>${escapeHtml(tool.publisher)}</span>
+        <span>${escapeHtml(tool.maturity)}</span>
         <span>${escapeHtml(formatDate(tool.lastUpdatedAt))}</span>
       </div>
       <div class="scout-card__actions">
@@ -416,7 +426,10 @@ function renderUpdateCard(update, tool, outputPath, compact = false) {
           <p class="label">${escapeHtml(tool.toolType)} / ${escapeHtml(tool.name)}</p>
           <h3>${escapeHtml(update.title)}</h3>
         </div>
-        <span class="pill pill--${badgeTone(tool.badge)}">${escapeHtml(tool.badge)}</span>
+        <div class="chip-row">
+          <span class="pill pill--ink">${escapeHtml(titleCaseFromSlug(update.kind || 'update'))}</span>
+          <span class="pill pill--${badgeTone(tool.badge)}">${escapeHtml(tool.badge)}</span>
+        </div>
       </div>
       <p class="summary">${escapeHtml(update.summary)}</p>
       <div class="activity-card__meta">
@@ -524,7 +537,7 @@ function renderDocument({ title, description, currentKey, outputPath, content })
     <link rel="manifest" href="${outputAssetHref(outputPath, 'manifest.json')}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,500..800,50&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="${outputAssetHref(outputPath, 'styles.css')}" />
   </head>
   <body data-page="${escapeHtml(currentKey)}" data-site-root="${escapeHtml(siteRoot)}">
@@ -536,10 +549,20 @@ function renderDocument({ title, description, currentKey, outputPath, content })
       <div class="atmosphere__flare atmosphere__flare--ice"></div>
       <div class="atmosphere__flare atmosphere__flare--ember"></div>
     </div>
+    <div class="site-meta-bar">
+      <div class="site-meta-bar__inner">
+        <p class="site-meta-bar__issue">Issue ${escapeHtml(GENERATED_AT)} // Curated public signal for builders</p>
+        <div class="site-meta-bar__tokens">
+          <span>No fake telemetry</span>
+          <span>Official sources first</span>
+          <span>Badges over fake scores</span>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <a class="site-brand" href="${homeHref}">
         <span class="site-brand__mark">S</span>
-        <span>StackScout</span>
+        <span class="site-brand__wordmark">StackScout</span>
       </a>
       <nav class="site-nav" aria-label="Primary">${renderNav(currentKey, outputPath)}</nav>
     </header>
@@ -565,7 +588,12 @@ function renderHome(site, tools, updates, categories, collections, outputPath) {
   const featuredTools = site.home.featureSlugs.map((slug) => tools.find((tool) => tool.slug === slug)).filter(Boolean)
   const labTools = tools.filter((tool) => tool.scope === 'lab')
   const latestUpdates = updates.slice(0, 6)
+  const spotlightUpdate = updates[0]
+  const spotlightTool = spotlightUpdate ? tools.find((tool) => tool.slug === spotlightUpdate.toolSlug) : null
   const toolIndex = new Map(tools.map((tool) => [tool.slug, tool]))
+  const recommendedCount = tools.filter((tool) => tool.badge === 'Recommended').length
+  const mcpCount = tools.filter((tool) => tool.category === 'mcps').length
+  const labCount = labTools.length
 
   return renderDocument({
     title: 'StackScout // Home',
@@ -573,7 +601,7 @@ function renderHome(site, tools, updates, categories, collections, outputPath) {
     currentKey: 'home',
     outputPath,
     content: `
-      <section class="hero hero--home">
+      <section class="hero hero--home hero--launch">
         <div class="hero__copy" data-reveal>
           <p class="eyebrow">${escapeHtml(site.brand.heroEyebrow)}</p>
           <h1>${escapeHtml(site.brand.heroTitle)}</h1>
@@ -581,27 +609,61 @@ function renderHome(site, tools, updates, categories, collections, outputPath) {
           <div class="hero__actions">
             <a class="button button--primary" href="${outputHref(outputPath, 'catalog/index.html')}">Explore catalog</a>
             <a class="button button--ghost" href="${outputHref(outputPath, 'updates/index.html')}">See updates</a>
+            <a class="button button--ghost" href="${outputQueryHref(outputPath, 'catalog/index.html', { badge: 'Recommended', scope: 'ecosystem' })}">Open recommended picks</a>
             <button id="installAppBtn" class="button button--ghost" type="button" hidden>Install site</button>
           </div>
-          <ul class="hero__facts">${site.home.heroFacts.map((fact) => `<li>${escapeHtml(fact)}</li>`).join('')}</ul>
+          <div class="hero__command-row">
+            <a class="token token--link" href="${outputQueryHref(outputPath, 'catalog/index.html', { category: 'mcps' })}">Browse MCPs</a>
+            <a class="token token--link" href="${outputQueryHref(outputPath, 'catalog/index.html', { category: 'apis' })}">Browse APIs</a>
+            <a class="token token--link" href="${outputQueryHref(outputPath, 'catalog/index.html', { scope: 'lab' })}">Open lab tools</a>
+            <a class="token token--link" href="${outputHref(outputPath, 'collections/index.html')}#creator-stack">Creator stack</a>
+          </div>
         </div>
         <div class="hero__rail" data-reveal>
-          <div class="hero-stat">
-            <span class="label">Tracked</span>
-            <strong>${tools.length}</strong>
-            <p>${tools.filter((tool) => tool.scope === 'ecosystem').length} ecosystem picks and ${tools.filter((tool) => tool.scope === 'lab').length} lab entries.</p>
-          </div>
-          <div class="hero-stat">
-            <span class="label">Freshest signal</span>
-            <strong>${escapeHtml(formatDate(updates[0].publishedAt))}</strong>
-            <p>${escapeHtml(updates[0].title)}</p>
-          </div>
-          <div class="hero-stat">
-            <span class="label">Public promise</span>
-            <strong>No fake telemetry</strong>
-            <p>Every item carries a visible source and date.</p>
-          </div>
+          <article class="hero-panel hero-panel--lead">
+            <p class="label">Lead signal</p>
+            <h2>${escapeHtml(spotlightUpdate?.title || 'Fresh public movement')}</h2>
+            <p class="summary">${escapeHtml(spotlightUpdate?.summary || site.brand.description)}</p>
+            <div class="hero-panel__meta">
+              <span>${escapeHtml(spotlightTool?.name || 'StackScout')}</span>
+              <span>${escapeHtml(spotlightUpdate ? formatDate(spotlightUpdate.publishedAt) : formatDate(GENERATED_AT))}</span>
+              <span>${escapeHtml(spotlightUpdate?.sourceLabel || 'StackScout')}</span>
+            </div>
+            <div class="hero__actions">
+              ${spotlightTool ? `<a class="button button--primary" href="${outputHref(outputPath, `tools/${spotlightTool.slug}/index.html`)}">Open dossier</a>` : ''}
+              ${spotlightUpdate ? `<a class="button button--ghost" href="${escapeHtml(spotlightUpdate.sourceUrl)}" target="_blank" rel="noreferrer">Read source</a>` : ''}
+            </div>
+          </article>
+          <article class="hero-panel hero-panel--metrics">
+            <p class="label">At a glance</p>
+            <div class="hero-stat-grid">
+              <div class="hero-stat-tile">
+                <span>Tracked</span>
+                <strong>${tools.length}</strong>
+                <p>${tools.filter((tool) => tool.scope === 'ecosystem').length} ecosystem tools</p>
+              </div>
+              <div class="hero-stat-tile">
+                <span>Recommended</span>
+                <strong>${recommendedCount}</strong>
+                <p>Current strongest public picks</p>
+              </div>
+              <div class="hero-stat-tile">
+                <span>MCPs</span>
+                <strong>${mcpCount}</strong>
+                <p>Agent-ready protocol surfaces</p>
+              </div>
+              <div class="hero-stat-tile">
+                <span>Lab</span>
+                <strong>${labCount}</strong>
+                <p>Clearly labelled in-house tools</p>
+              </div>
+            </div>
+          </article>
         </div>
+      </section>
+
+      <section class="signal-strip" data-reveal>
+        ${site.home.heroFacts.map((fact) => `<article class="signal-chip"><p>${escapeHtml(fact)}</p></article>`).join('')}
       </section>
 
       <section class="section-block" data-reveal>
@@ -612,7 +674,49 @@ function renderHome(site, tools, updates, categories, collections, outputPath) {
           </div>
           <p class="section-copy">A rotating set of ecosystem tools that feel especially relevant right now.</p>
         </div>
-        <div class="card-grid card-grid--featured">${featuredTools.map((tool) => renderToolCard(tool, outputPath)).join('')}</div>
+        <div class="home-split">
+          <div class="card-grid card-grid--featured">${featuredTools.map((tool) => renderToolCard(tool, outputPath)).join('')}</div>
+          <aside class="brief-column">
+            <article class="brief-panel">
+              <p class="label">Quick starts</p>
+              <h3>Open the catalog with intent.</h3>
+              <div class="brief-list">
+                <a class="brief-link" href="${outputQueryHref(outputPath, 'catalog/index.html', { scope: 'ecosystem', badge: 'Recommended' })}">
+                  <span>Recommended ecosystem tools</span>
+                  <strong>${recommendedCount} picks</strong>
+                </a>
+                <a class="brief-link" href="${outputQueryHref(outputPath, 'catalog/index.html', { category: 'mcps' })}">
+                  <span>MCPs worth trying</span>
+                  <strong>${mcpCount} tracked</strong>
+                </a>
+                <a class="brief-link" href="${outputQueryHref(outputPath, 'catalog/index.html', { scope: 'lab' })}">
+                  <span>StackScout Lab</span>
+                  <strong>${labCount} public builds</strong>
+                </a>
+                <a class="brief-link" href="${outputHref(outputPath, 'collections/index.html')}#offline-friendly">
+                  <span>Offline-friendly shortlist</span>
+                  <strong>4 picks</strong>
+                </a>
+              </div>
+            </article>
+            <article class="brief-panel">
+              <p class="label">Workflow lanes</p>
+              <h3>Start from the job, not the logo.</h3>
+              <div class="brief-list">
+                ${categories
+                  .map(
+                    (category) => `
+                      <a class="brief-link" href="${outputHref(outputPath, `categories/${category.slug}/index.html`)}">
+                        <span>${escapeHtml(category.title)}</span>
+                        <strong>${tools.filter((tool) => tool.category === category.slug).length} tracked</strong>
+                      </a>
+                    `,
+                  )
+                  .join('')}
+              </div>
+            </article>
+          </aside>
+        </div>
       </section>
 
       <section class="section-block" data-reveal>
@@ -636,8 +740,29 @@ function renderHome(site, tools, updates, categories, collections, outputPath) {
           </div>
           <p class="section-copy">A lighter public activity stream sourced from official changelogs, release notes, blogs, and first-party repos.</p>
         </div>
-        <div class="activity-grid">
-          ${latestUpdates.map((update) => renderUpdateCard(update, toolIndex.get(update.toolSlug), outputPath, true)).join('')}
+        <div class="newsroom-grid">
+          <div class="activity-grid">
+            ${latestUpdates.slice(0, 3).map((update) => renderUpdateCard(update, toolIndex.get(update.toolSlug), outputPath, true)).join('')}
+          </div>
+          <aside class="brief-column">
+            <article class="brief-panel">
+              <p class="label">Signal stream</p>
+              <h3>Fresh public movement.</h3>
+              <div class="brief-list">
+                ${latestUpdates
+                  .slice(3, 6)
+                  .map(
+                    (update) => `
+                      <a class="brief-link" href="${outputHref(outputPath, `tools/${update.toolSlug}/index.html`)}">
+                        <span>${escapeHtml(update.title)}</span>
+                        <strong>${escapeHtml(formatDate(update.publishedAt))}</strong>
+                      </a>
+                    `,
+                  )
+                  .join('')}
+              </div>
+            </article>
+          </aside>
         </div>
       </section>
 
@@ -676,6 +801,7 @@ function renderCatalog(tools, categories, outputPath) {
   const toolTypes = [...new Set(tools.map((tool) => tool.toolType))].sort()
   const pricingOptions = [...new Set(tools.map((tool) => tool.pricing))].sort()
   const badges = [...new Set(tools.map((tool) => tool.badge))]
+  const newestTracked = [...tools].sort((left, right) => right.lastUpdatedAt.localeCompare(left.lastUpdatedAt))[0]
 
   return renderDocument({
     title: 'StackScout // Catalog',
@@ -688,62 +814,110 @@ function renderCatalog(tools, categories, outputPath) {
           <p class="eyebrow">Catalog</p>
           <h1>Search first. Scroll second.</h1>
           <p class="hero__lede">The catalog is intentionally selective. It should feel closer to a scout desk than an app store.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="${outputHref(outputPath, 'updates/index.html')}">Open updates</a>
+            <a class="button button--ghost" href="${outputHref(outputPath, 'method/index.html')}">Read method</a>
+          </div>
+        </div>
+        <div class="hero__rail" data-reveal>
+          <article class="hero-panel hero-panel--lead">
+            <p class="label">Newest tracked change</p>
+            <h2>${escapeHtml(newestTracked.name)}</h2>
+            <p class="summary">${escapeHtml(newestTracked.latestTrackedChange)}</p>
+            <div class="hero-panel__meta">
+              <span>${escapeHtml(newestTracked.badge)}</span>
+              <span>${escapeHtml(formatDate(newestTracked.lastUpdatedAt))}</span>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="section-block" data-reveal>
-        <div class="catalog-toolbar">
-          <label class="filter-field filter-field--search">
-            <span>Search</span>
-            <input id="catalogSearch" type="search" placeholder="Search names, summaries, tags, publishers, or latest changes" />
-          </label>
-          <label class="filter-field">
-            <span>Scope</span>
-            <select id="scopeFilter">
-              <option value="">All</option>
-              <option value="ecosystem">Ecosystem</option>
-              <option value="lab">StackScout Lab</option>
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Type</span>
-            <select id="typeFilter">
-              <option value="">All</option>
-              ${toolTypes.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join('')}
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Category</span>
-            <select id="categoryFilter">
-              <option value="">All</option>
-              ${categories.map((category) => `<option value="${escapeHtml(category.slug)}">${escapeHtml(category.title)}</option>`).join('')}
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Pricing</span>
-            <select id="pricingFilter">
-              <option value="">All</option>
-              ${pricingOptions.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join('')}
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Badge</span>
-            <select id="badgeFilter">
-              <option value="">All</option>
-              ${badges.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join('')}
-            </select>
-          </label>
-          <label class="filter-field">
-            <span>Sort</span>
-            <select id="sortFilter">
-              <option value="priority">Editorial priority</option>
-              <option value="newest">Newest tracked change</option>
-              <option value="name">Name</option>
-            </select>
-          </label>
+        <div class="catalog-layout">
+          <aside class="catalog-sidebar">
+            <div class="catalog-panel">
+              <p class="label">Find your lane</p>
+              <div class="catalog-toolbar">
+                <label class="filter-field filter-field--search">
+                  <span>Search</span>
+                  <input id="catalogSearch" type="search" placeholder="Search names, summaries, tags, publishers, or latest changes" />
+                </label>
+                <label class="filter-field">
+                  <span>Scope</span>
+                  <select id="scopeFilter">
+                    <option value="">All</option>
+                    <option value="ecosystem">Ecosystem</option>
+                    <option value="lab">StackScout Lab</option>
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Type</span>
+                  <select id="typeFilter">
+                    <option value="">All</option>
+                    ${toolTypes.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join('')}
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Category</span>
+                  <select id="categoryFilter">
+                    <option value="">All</option>
+                    ${categories.map((category) => `<option value="${escapeHtml(category.slug)}">${escapeHtml(category.title)}</option>`).join('')}
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Pricing</span>
+                  <select id="pricingFilter">
+                    <option value="">All</option>
+                    ${pricingOptions.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join('')}
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Badge</span>
+                  <select id="badgeFilter">
+                    <option value="">All</option>
+                    ${badges.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join('')}
+                  </select>
+                </label>
+                <label class="filter-field">
+                  <span>Sort</span>
+                  <select id="sortFilter">
+                    <option value="priority">Editorial priority</option>
+                    <option value="newest">Newest tracked change</option>
+                    <option value="name">Name</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="catalog-panel">
+              <p class="label">Preset views</p>
+              <div class="brief-list">
+                <a class="brief-link" href="${outputQueryHref(outputPath, 'catalog/index.html', { scope: 'ecosystem', badge: 'Recommended' })}">
+                  <span>Recommended ecosystem tools</span>
+                  <strong>Fastest route to the strongest picks</strong>
+                </a>
+                <a class="brief-link" href="${outputQueryHref(outputPath, 'catalog/index.html', { category: 'mcps' })}">
+                  <span>MCPs worth trying</span>
+                  <strong>Agent-ready protocol surfaces</strong>
+                </a>
+                <a class="brief-link" href="${outputQueryHref(outputPath, 'catalog/index.html', { scope: 'lab' })}">
+                  <span>StackScout Lab</span>
+                  <strong>Clearly labelled in-house tools</strong>
+                </a>
+                <a class="brief-link" href="${outputQueryHref(outputPath, 'catalog/index.html', { pricing: 'Usage-based' })}">
+                  <span>Usage-based APIs</span>
+                  <strong>Paid model and platform surfaces</strong>
+                </a>
+              </div>
+            </div>
+          </aside>
+          <div class="catalog-main">
+            <div class="catalog-results">
+              <p id="catalogResultCount">${tools.length} entries</p>
+              <p>URL state updates as filters change, so every filtered view is linkable.</p>
+            </div>
+            <div id="catalogGrid" class="card-grid card-grid--catalog">${tools.map((tool) => renderToolCard(tool, outputPath)).join('')}</div>
+          </div>
         </div>
-        <div class="catalog-results"><p id="catalogResultCount">${tools.length} entries</p></div>
-        <div id="catalogGrid" class="card-grid">${tools.map((tool) => renderToolCard(tool, outputPath)).join('')}</div>
       </section>
     `,
   })
@@ -771,17 +945,20 @@ function renderToolDetail(tool, relatedTools, toolUpdates, outputPath) {
             ${tool.docsUrl ? `<a class="button button--ghost" href="${escapeHtml(tool.docsUrl)}" target="_blank" rel="noreferrer">Docs</a>` : ''}
             ${tool.repoUrl ? `<a class="button button--ghost" href="${escapeHtml(tool.repoUrl)}" target="_blank" rel="noreferrer">Repo</a>` : ''}
           </div>
+          <div class="chip-row">${renderChips(tool.bestFor, 'ink', 'Best for')}</div>
         </div>
-        <div class="detail-side" data-reveal>
-          <article class="detail-panel">
+        <div class="hero__rail" data-reveal>
+          <article class="hero-panel">
             <span class="label">Publisher</span>
             <strong>${escapeHtml(tool.publisher)}</strong>
+            <p class="summary">${escapeHtml(tool.toolType)} / ${escapeHtml(categoryLabel(tool.category))}</p>
           </article>
-          <article class="detail-panel">
+          <article class="hero-panel">
             <span class="label">Pricing</span>
             <strong>${escapeHtml(tool.pricing)}</strong>
+            <p class="summary">${tool.platforms.length} platform signal${tool.platforms.length === 1 ? '' : 's'}</p>
           </article>
-          <article class="detail-panel">
+          <article class="hero-panel">
             <span class="label">Latest tracked change</span>
             <strong>${escapeHtml(formatDate(tool.lastUpdatedAt))}</strong>
             <p>${escapeHtml(tool.latestTrackedChange)}</p>
@@ -800,7 +977,6 @@ function renderToolDetail(tool, relatedTools, toolUpdates, outputPath) {
           <div class="detail-panel detail-panel--prose">
             <p class="lead">${escapeHtml(tool.verdict)}</p>
             <p>${escapeHtml(tool.latestTrackedChange)}</p>
-            <div class="chip-row">${renderChips(tool.bestFor, 'ink', 'Best for')}</div>
           </div>
           <div class="detail-panel detail-panel--prose">
             <p class="label">Platforms</p>

@@ -14,7 +14,7 @@
     <link rel="manifest" href="../../manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,500..800,50&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../styles.css" />
   </head>
   <body data-page="catalog" data-site-root="../../">
@@ -26,10 +26,20 @@
       <div class="atmosphere__flare atmosphere__flare--ice"></div>
       <div class="atmosphere__flare atmosphere__flare--ember"></div>
     </div>
+    <div class="site-meta-bar">
+      <div class="site-meta-bar__inner">
+        <p class="site-meta-bar__issue">Issue 2026-04-25 // Curated public signal for builders</p>
+        <div class="site-meta-bar__tokens">
+          <span>No fake telemetry</span>
+          <span>Official sources first</span>
+          <span>Badges over fake scores</span>
+        </div>
+      </div>
+    </div>
     <header class="site-header">
       <a class="site-brand" href="../../">
         <span class="site-brand__mark">S</span>
-        <span>StackScout</span>
+        <span class="site-brand__wordmark">StackScout</span>
       </a>
       <nav class="site-nav" aria-label="Primary"><a href="../../">Home</a><a href="../../catalog/" aria-current="page">Catalog</a><a href="../../categories/">Categories</a><a href="../../updates/">Updates</a><a href="../../radar/">Radar</a><a href="../../collections/">Collections</a><a href="../../method/">Method</a></nav>
     </header>
@@ -49,17 +59,20 @@
             <a class="button button--ghost" href="https://github.com/koltregaskes/strudel-studio" target="_blank" rel="noreferrer">Docs</a>
             <a class="button button--ghost" href="https://github.com/koltregaskes/strudel-studio" target="_blank" rel="noreferrer">Repo</a>
           </div>
+          <div class="chip-row"><span class="chip chip--ink">Best for: browser music prototyping</span><span class="chip chip--ink">Best for: pattern-driven composition</span><span class="chip chip--ink">Best for: creative experiments</span></div>
         </div>
-        <div class="detail-side" data-reveal>
-          <article class="detail-panel">
+        <div class="hero__rail" data-reveal>
+          <article class="hero-panel">
             <span class="label">Publisher</span>
             <strong>StackScout Lab</strong>
+            <p class="summary">Web App / Web Apps</p>
           </article>
-          <article class="detail-panel">
+          <article class="hero-panel">
             <span class="label">Pricing</span>
             <strong>Free</strong>
+            <p class="summary">2 platform signals</p>
           </article>
-          <article class="detail-panel">
+          <article class="hero-panel">
             <span class="label">Latest tracked change</span>
             <strong>12 Apr 2026</strong>
             <p>The takeover pass tightened the smoke runner and kept the product moving toward a more serious music workspace.</p>
@@ -78,7 +91,6 @@
           <div class="detail-panel detail-panel--prose">
             <p class="lead">Promising and distinctive, with more identity than polish at this stage.</p>
             <p>The takeover pass tightened the smoke runner and kept the product moving toward a more serious music workspace.</p>
-            <div class="chip-row"><span class="chip chip--ink">Best for: browser music prototyping</span><span class="chip chip--ink">Best for: pattern-driven composition</span><span class="chip chip--ink">Best for: creative experiments</span></div>
           </div>
           <div class="detail-panel detail-panel--prose">
             <p class="label">Platforms</p>
@@ -121,7 +133,10 @@
           <p class="label">Web App / Strudel Studio</p>
           <h3>Strudel Studio&#39;s latest public pass focused on smoke-run reliability</h3>
         </div>
-        <span class="pill pill--amber">Worth Watching</span>
+        <div class="chip-row">
+          <span class="pill pill--ink">Lab</span>
+          <span class="pill pill--amber">Worth Watching</span>
+        </div>
       </div>
       <p class="summary">The recent manager-side pass caught and fixed a release-smoke issue while keeping the studio workflow moving forward.</p>
       <div class="activity-card__meta">
@@ -171,6 +186,7 @@
       </div>
       <div class="scout-card__meta">
         <span>StackScout Lab</span>
+        <span>Experimental</span>
         <span>12 Apr 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -204,6 +220,7 @@
       </div>
       <div class="scout-card__meta">
         <span>OpenAI</span>
+        <span>Fast-moving</span>
         <span>5 Mar 2026</span>
       </div>
       <div class="scout-card__actions">
@@ -221,7 +238,7 @@
         <p>Public tool intelligence for builders, operators, and curious system nerds.</p>
       </div>
       <div class="site-footer__meta">
-        <p>Updated 21 Apr 2026</p>
+        <p>Updated 25 Apr 2026</p>
         <p>Public site generation from the StackScout shared source layer.</p>
       </div>
     </footer>

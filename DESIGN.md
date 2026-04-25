@@ -16,14 +16,15 @@ StackScout should feel related to the wider public hub family without becoming v
 
 - dark editorial shell
 - acid green / ice blue / ember accents
-- serious typography with a magazine edge
+- high-contrast newsroom typography with a field-report edge
 - restrained motion
 - strong hierarchy, not dense widget clutter
+- a launch-surface tone closer to a signal desk than a directory grid
 
 ### Fonts
 
-- display: `Instrument Serif`
-- body/UI: `Instrument Sans`
+- display: `Fraunces`
+- body/UI: `Archivo`
 - metadata: `IBM Plex Mono`
 
 ### Color system
@@ -40,6 +41,13 @@ StackScout should feel related to the wider public hub family without becoming v
   --violet: #c7b6ff;
 }
 ```
+
+### Current shell notes
+
+- the top chrome should read like an issue header, not a SaaS navbar
+- `Home` should feel like an editorial front page with a lead signal and quick routes into the catalog
+- `Catalog` should feel like a scout desk with shareable filter state, not a plain card dump
+- tool pages should feel like public dossiers with verdict, metadata, links, and recent movement
 
 ## Layout principles
 

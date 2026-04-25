@@ -56,6 +56,15 @@ function initCatalogFilters() {
   const badge = document.getElementById('badgeFilter')
   const sort = document.getElementById('sortFilter')
   const controls = [search, scope, type, category, pricing, badge, sort].filter(Boolean)
+  const filterMap = {
+    q: search,
+    scope,
+    type,
+    category,
+    pricing,
+    badge,
+    sort,
+  }
 
   function currentFilters() {
     return {
@@ -67,6 +76,36 @@ function initCatalogFilters() {
       badge: normalise(badge?.value),
       sort: normalise(sort?.value || 'priority'),
     }
+  }
+
+  function hydrateFromQuery() {
+    const params = new URLSearchParams(window.location.search)
+    Object.entries(filterMap).forEach(([key, control]) => {
+      if (!control) {
+        return
+      }
+
+      const value = params.get(key)
+      if (value !== null) {
+        control.value = value
+      }
+    })
+  }
+
+  function writeQuery(filters) {
+    const params = new URLSearchParams()
+
+    if (filters.search) params.set('q', search?.value || '')
+    if (filters.scope) params.set('scope', scope?.value || '')
+    if (filters.type) params.set('type', type?.value || '')
+    if (filters.category) params.set('category', category?.value || '')
+    if (filters.pricing) params.set('pricing', pricing?.value || '')
+    if (filters.badge) params.set('badge', badge?.value || '')
+    if (filters.sort && filters.sort !== 'priority') params.set('sort', sort?.value || '')
+
+    const nextQuery = params.toString()
+    const nextUrl = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ''}${window.location.hash || ''}`
+    window.history.replaceState({}, '', nextUrl)
   }
 
   function matches(card, filters) {
@@ -107,6 +146,7 @@ function initCatalogFilters() {
   function applyFilters() {
     const filters = currentFilters()
     const visibleCards = cards.filter((card) => matches(card, filters)).sort((left, right) => compareCards(left, right, filters.sort))
+    writeQuery(filters)
 
     cards.forEach((card) => {
       card.hidden = true
@@ -127,6 +167,7 @@ function initCatalogFilters() {
     control.addEventListener('change', applyFilters)
   })
 
+  hydrateFromQuery()
   applyFilters()
 }
 
