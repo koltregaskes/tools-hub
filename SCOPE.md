@@ -3,7 +3,7 @@
 **Status:** v1 DRAFT, awaiting Kol's review and amendment
 **Last updated:** 2026-05-16
 **Author:** Claude (website manager)
-**Purpose:** Capture the strategic context for `tools-hub` so future design + content briefs (especially Claude Design handoffs) start from a shared understanding.
+**Purpose:** Capture the strategic context for `stackscout` so future design + content briefs (especially Claude Design handoffs) start from a shared understanding.
 
 This is **not** a design brief and not an implementation plan. The repo already has a solid `DESIGN.md` (StackScout's identity, fonts, colour system). This brief covers product context, audience, and content sources.
 
@@ -11,12 +11,12 @@ This is **not** a design brief and not an implementation plan. The repo already 
 
 ## Product identity
 
-**Repo:** `tools-hub` (on disk at `W:\Websites\sites\tools-hub`)
+**Repo:** `stackscout` (on disk at `W:\Websites\sites\stackscout`)
 **Public brand:** StackScout
 **Domain:** TBD
 **Stack:** Static HTML + vanilla CSS/JS with a shared source layer (JSON-driven content generation). Per existing structure: `catalog/`, `categories/`, `collections/`, `content/`, `data/`, `app.js`, `assets/`.
 **Deploy:** GitHub Pages from the public repo
-**Private counterpart:** `W:\Repos\_local\surfaces\tools-hub-local` (operational console — out of scope here)
+**Private counterpart:** `W:\Repos\_local\surfaces\stackscout-local` (operational console — out of scope here)
 
 **One-sentence pitch:** StackScout is a curated scout-desk for builder tools — APIs, MCPs, CLIs, services — where every entry has been used or vetted by Kol, not just listed.
 
